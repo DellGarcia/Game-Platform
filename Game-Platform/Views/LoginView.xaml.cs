@@ -17,11 +17,17 @@ namespace Game_Platform.Views
     /// <summary>
     /// Lógica interna para InitView.xaml
     /// </summary>
-    public partial class InitView : Window
+    public partial class LoginView : Window
     {
-        public InitView()
+        public LoginView()
         {
             InitializeComponent();
+        }
+
+        private void NavigateToRegisterView(object sender, RoutedEventArgs e)
+        {
+            new RegisterView().Show();
+            Close();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Game_Platform.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,31 @@ namespace Game_Platform.Views
         public RegisterView()
         {
             InitializeComponent();
+        }
+
+        private void NavigateToLoginView(object sender, RoutedEventArgs e)
+        {
+            new LoginView().Show();
+            Close();
+        }
+
+        private void HandleRegister(object sender, RoutedEventArgs e)
+        {
+            if(txtSenha.Password == txtConfSenha.Password)
+            {
+                Player player = new Player();
+
+                player.Username = txtUsuario.Text.Trim();
+                player.Email = txtEmail.Text.Trim();
+                player.Password = txtSenha.Password;
+
+                MainWindow main = new MainWindow(player);
+                main.Show();
+                Close();
+            } else
+            {
+                MessageBox.Show("Senhas não coicidem");
+            }
         }
     }
 }

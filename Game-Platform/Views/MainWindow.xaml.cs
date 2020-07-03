@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Game_Platform.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,21 @@ namespace Game_Platform
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        Player Player { get; set; }
+
+        public MainWindow(Player player)
         {
+            Player = player;
             InitializeComponent();
+            ShowPlayerInfo();
         }
+
+        private void ShowPlayerInfo()
+        {
+            txtUsername.Text = Player.Username;
+            txtScore.Text = $"{Player.Score}";
+            txtFriends.Text =  $"{Player.Friends.Count()}";
+        }
+
     }
 }

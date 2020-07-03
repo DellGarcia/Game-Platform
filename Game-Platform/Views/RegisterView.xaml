@@ -6,8 +6,30 @@
         xmlns:local="clr-namespace:Game_Platform.Views"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="RegisterView" Height="450" Width="800">
+        Title="RegisterView" Height="600" Width="800" WindowStartupLocation="CenterScreen" Background="#FF490570" ResizeMode="NoResize" WindowStyle="None">
     <Grid>
-        
+        <Border CornerRadius="10" BorderThickness="2" Margin="200 60" Background="White">
+            <StackPanel>
+                <StackPanel HorizontalAlignment="Center" >
+                    <TextBlock Text="Nome de usuário:" HorizontalAlignment="Left" Margin="0 50 0 0" FontSize="18"/>
+                    <TextBox x:Name="txtUsuario"  HorizontalAlignment="Left" Margin="0 10 0 0" Width="230"/>
+
+                    <TextBlock Text="Email:" HorizontalAlignment="Left" Margin="0 30 0 0" FontSize="18"/>
+                    <TextBox x:Name="txtEmail"  HorizontalAlignment="Left" Margin="0 10 0 0" Width="230"/>
+
+                    <TextBlock Text="Senha:" HorizontalAlignment="Left" Margin="0 30 0 0" FontSize="18"/>
+                    <PasswordBox x:Name="txtSenha" HorizontalAlignment="Left" Margin="0 10 0 0" Width="230"/>
+
+                    <TextBlock Text="Confirme a senha:" HorizontalAlignment="Left" Margin="0 30 0 0" FontSize="18"/>
+                    <PasswordBox x:Name="txtConfSenha" HorizontalAlignment="Left" Margin="0 10 0 0" Width="230"/>
+
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 40">
+                        <Button  Content="Voltar" FontSize="12" Margin="10 0" Height="30" Padding="15 0" Width="90" Click="NavigateToLoginView"/>
+                        <Button  Content="Cadastrar" FontSize="12" Margin="10 0" Height="30" Padding="15 0" Width="90" Click="HandleRegister"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

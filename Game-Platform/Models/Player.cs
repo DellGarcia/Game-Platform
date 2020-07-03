@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace Game_Platform.Models
 {
-    class Player
+    public class Player
     {
-        private string Username { get; set; }
-        private string Email { get; set; }
-        private string Password { get; set; }
-        private int Score { get; set; }
-        private List<Player> Friends { get; }
+        public string Username { get; set; }
+        public string Email { get;  set; }
+        public string Password { get;  set; }
+        public int Score { get; set; }
+        public List<Player> Friends { get; }
 
+        public Player()
+        {
+            Score = 0;
+            Friends = new List<Player>();
+        }
     }
 }

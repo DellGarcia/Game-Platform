@@ -6,31 +6,30 @@
         xmlns:local="clr-namespace:Game_Platform"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Game Platform" Height="450" Width="800" WindowState="Maximized" Background="#FF490570" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Icon="Assets/icon2.png">
+        Title="Game Platform" Height="720" Width="1080" WindowState="Maximized" Background="#FF490570" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Icon="/Assets/icon2.png">
     <Grid>
         <Grid Height="100" VerticalAlignment="Top" Background="White">
-            <Image Source="Assets/icon2.png" HorizontalAlignment="Left" Margin="10 0" Width="80"/>
+            <Image Source="/Assets/icon2.png" HorizontalAlignment="Left" Margin="10 0" Width="80"/>
             <TextBlock Text="Learn by playing ✨" Margin="10" FontSize="18" Foreground="#FF2A6088" HorizontalAlignment="Center"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <StackPanel VerticalAlignment="Bottom">
                     <TextBlock Text="USERNAME" Margin="10 0" FontSize="16" FontWeight="Bold" Foreground="#FF2A6088" />
-                    <TextBlock Text="2K" HorizontalAlignment="Center" Margin="5 0 5 5" FontSize="16" Foreground="#FF2A6088"/>
+                    <TextBlock x:Name="txtUsername" Text="2K" HorizontalAlignment="Center" Margin="5 0 5 5" FontSize="16" Foreground="#FF2A6088"/>
                 </StackPanel>
                 <StackPanel VerticalAlignment="Bottom">
                     <TextBlock Text="SCORE" Margin="10 0" FontSize="16" FontWeight="Bold" Foreground="#FF2A6088"/>
-                    <TextBlock Text="957" HorizontalAlignment="Center" Margin="5 0 5 5" FontSize="16" Foreground="#FF2A6088"/>
+                    <TextBlock x:Name="txtScore" Text="957" HorizontalAlignment="Center" Margin="5 0 5 5" FontSize="16" Foreground="#FF2A6088"/>
                 </StackPanel>
                 <StackPanel VerticalAlignment="Bottom">
                     <TextBlock Text="FRIENDS" Margin="10 0" FontSize="16" FontWeight="Bold" Foreground="#FF2A6088"/>
-                    <TextBlock Text="145" HorizontalAlignment="Center" Margin="5 0 5 5" FontSize="16" Foreground="#FF2A6088"/>
+                    <TextBlock x:Name="txtFriends" Text="145" HorizontalAlignment="Center" Margin="5 0 5 5" FontSize="16" Foreground="#FF2A6088"/>
                 </StackPanel>
             </StackPanel>
-            <Image Source="Assets/turn-off-dark.png"  Width="30" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Top"/>
+            <Image Source="/Assets/turn-off-dark.png"  Width="30" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Top"/>
         </Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="50" >
-            <TextBlock FontFamily="Nirmala UI" Text="Lucas" FontSize="30" Margin="20" VerticalAlignment="Center" Foreground="White"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="20 50" >
             <StackPanel HorizontalAlignment="Right">
-                <Ellipse Height="150" Width="150" StrokeThickness="4">
+                <Ellipse Height="65" Width="68" StrokeThickness="4">
                     <Ellipse.Stroke>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="Black" Offset="0"/>
@@ -48,7 +47,7 @@
             <TextBox Width="150" materialDesign:HintAssist.Hint="SEARCH" Foreground="White"/>
             <materialDesign:PackIcon Kind="AccountSearch" Foreground="White" VerticalAlignment="Center"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left">
+        <StackPanel HorizontalAlignment="Right">
             <TextBlock Text="Your  Friends" FontSize="20" Foreground="White" TextAlignment="Center" Width="500" Margin="0 200 0 0"/>
             <ListView Height="200" HorizontalAlignment="Left" Margin="0 10 0 0">
                 <ListViewItem Height="50" Width="500">
@@ -96,6 +95,18 @@
                     </Grid>
                 </ListViewItem>
             </ListView>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left">
+            
+                <TextBlock Text="Avaliable Games" FontSize="20" Foreground="White" TextAlignment="Center" Width="500" Margin="0 200 0 0"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <materialDesign:Card Width="150" Height="100" Margin="15"/>
+                    <materialDesign:Card Width="150" Height="100" Margin="15"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <materialDesign:Card Width="150" Height="100" Margin="15"/>
+                    <materialDesign:Card Width="150" Height="100" Margin="15"/>
+                </StackPanel>
         </StackPanel>
     </Grid>
 </Window>
