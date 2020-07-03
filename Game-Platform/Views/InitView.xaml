@@ -1,0 +1,27 @@
+﻿<Window x:Class="Game_Platform.Views.InitView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Game_Platform.Views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="InitView" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="#FF490570" ResizeMode="NoResize" WindowStyle="None">
+    <Grid>
+        <Border CornerRadius="15" BorderThickness="2" Margin="200 60" Background="White">
+            <StackPanel>
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBlock Text="Email:" HorizontalAlignment="Left" Margin="0 50 0 0" FontSize="18"/>
+                    <TextBox x:Name="txtEmail"  HorizontalAlignment="Left" Margin="0 10 0 0" Width="200"/>
+
+                    <TextBlock Text="Senha:" HorizontalAlignment="Left" Margin="0 30 0 0" FontSize="18"/>
+                    <PasswordBox x:Name="txtSenha" HorizontalAlignment="Left" Margin="0 10 0 0" Width="200"/>
+
+                    
+                    <Button  HorizontalAlignment="Left"  Background="{x:Null}" Margin="0 10" Content="Não tenho cadastro" Foreground="Blue" FontSize="10" BorderThickness="0" Height="20" Padding="0"/>
+                    <Button  HorizontalAlignment="Right" Content="Entrar" FontSize="12" Margin="0" Height="28" Padding="15 0"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
