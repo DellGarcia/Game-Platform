@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Game_Platform.Games.CosmosMemory.Views
 {
     /// <summary>
-    /// Lógica interna para CosmosMemoryMainView.xaml
+    /// Lógica interna para EasyGameView.xaml
     /// </summary>
-    public partial class CosmosMemoryInitView : Window
+    public partial class EasyGameView : Window
     {
-        public CosmosMemoryInitView()
+        public EasyGameView()
         {
             InitializeComponent();
         }
