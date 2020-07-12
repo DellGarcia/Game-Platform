@@ -37,5 +37,9 @@ namespace Game_Platform
             txtFriends.Text =  $"{Player.Friends.Count()}";
         }
 
+        private void HandleExit(object sender, MouseButtonEventArgs e)
+        {
+            Close();
+        }
     }
 }

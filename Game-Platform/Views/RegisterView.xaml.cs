@@ -2,6 +2,8 @@
 using Game_Platform.Models;
 using System.Windows;
 using System.Windows.Forms;
+using System.Windows.Input;
+using KeyEventArgs = System.Windows.Input.KeyEventArgs;
 
 namespace Game_Platform.Views
 {
@@ -23,9 +25,9 @@ namespace Game_Platform.Views
             Close();
         }
 
-        private void HandleRegister(object sender, RoutedEventArgs e)
+        private void RegisterAction()
         {
-            if(txtSenha.Password == txtConfSenha.Password)
+            if (txtSenha.Password == txtConfSenha.Password)
             {
                 Player player = new Player
                 {
@@ -37,10 +39,31 @@ namespace Game_Platform.Views
                 PlayerDAO dao = new PlayerDAO();
                 dao.Insert(player);
 
-            } else
+                System.Windows.Forms.MessageBox.Show("Cadastro efetuado com sucesso, faça login para jogar!");
+
+                new LoginView().Show();
+                Close();
+
+            }
+            else
             {
                 System.Windows.Forms.MessageBox.Show("Senhas não coicidem");
             }
+        }
+
+        private void HandleRegister(object sender, RoutedEventArgs e)
+        {
+            RegisterAction();
+        }
+
+        private void HandleEnter(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                System.Windows.Forms.MessageBox.Show("Enter");
+                //RegisterAction();
+            }
+            System.Windows.Forms.MessageBox.Show("Click");
         }
     }
 }

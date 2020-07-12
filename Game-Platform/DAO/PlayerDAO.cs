@@ -99,13 +99,13 @@ namespace Game_Platform.DAO
             return null;
         }
 
-        public Player Select(String username)
+        public Player Select(String email)
         {
             try
             {
                 connection.Open();
 
-                SqlDataAdapter query = new SqlDataAdapter($"SELECT * FROM tbPlayer WHERE usuario = {username}", connection.Connection);
+                SqlDataAdapter query = new SqlDataAdapter($"SELECT * FROM tbPlayer WHERE email = '{email}'", connection.Connection);
                 DataTable table = new DataTable();
 
                 query.Fill(table);

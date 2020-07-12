@@ -33,7 +33,7 @@
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 40">
                         <Button  Content="Voltar" FontSize="12" Margin="10 0" Height="30" Padding="15 0" Width="90" Click="NavigateToLoginView"/>
-                        <Button  Content="Cadastrar" FontSize="12" Margin="10 0" Height="30" Padding="15 0" Width="90" Click="HandleRegister"/>
+                        <Button  Content="Cadastrar" FontSize="12" Margin="10 0" Height="30" Padding="15 0" Width="90" Click="HandleRegister" KeyUp="HandleEnter"/>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>

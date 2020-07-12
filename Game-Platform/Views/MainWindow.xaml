@@ -33,7 +33,7 @@
                     <TextBlock x:Name="txtFriends" Text="145" HorizontalAlignment="Center" Margin="5 0 5 5" FontSize="16" Foreground="#FF2A6088"/>
                 </StackPanel>
             </StackPanel>
-            <Image Source="/Assets/turn-off-dark.png"  Width="30" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Top"/>
+            <Image Source="/Assets/turn-off-dark.png"  Width="30" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Top" MouseLeftButtonDown="HandleExit"/>
         </Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="20 50" >
             <StackPanel HorizontalAlignment="Right">
