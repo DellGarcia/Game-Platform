@@ -58,12 +58,19 @@
     </ApplicationDefinition>
     <Compile Include="DAO\PlayerDAO.cs" />
     <Compile Include="Database\ConnectionFactory.cs" />
+    <Compile Include="Games\CosmosMemory\Views\CosmosMemoryInitView.xaml.cs">
+      <DependentUpon>CosmosMemoryInitView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RegisterView.xaml.cs">
       <DependentUpon>RegisterView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Games\CosmosMemory\Views\CosmosMemoryInitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -139,6 +146,32 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\mini-falco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Games\CosmosMemory\Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Games\CosmosMemory\Assets\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Games\CosmosMemory\Assets\p1.png" />
+    <Resource Include="Games\CosmosMemory\Assets\p2.png" />
+    <Resource Include="Games\CosmosMemory\Assets\s1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Games\CosmosMemory\Assets\p3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Games\CosmosMemory\Assets\ovni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Games\CosmosMemory\Assets\p4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Games\CosmosMemory\Assets\s2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Games\CosmosMemory\Assets\galaxia.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

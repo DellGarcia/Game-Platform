@@ -1,0 +1,62 @@
+﻿<Window x:Class="Game_Platform.Games.CosmosMemory.Views.CosmosMemoryInitView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Game_Platform.Games.CosmosMemory.Views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="CosmosMemoryMainView" Height="720" Width="1080" WindowStyle="None" ResizeMode="NoResize" WindowState="Normal" Background="#FF161B2C">
+    <Grid>
+
+        <StackPanel>
+            <Image Source="/Games/CosmosMemory/Assets/p1.png" Width="80" HorizontalAlignment="Right" Margin="50 90"/>
+        </StackPanel>
+
+        <StackPanel>
+            <Image Source="/Games/CosmosMemory/Assets/galaxia.png" Width="80" HorizontalAlignment="Right" Margin="300 250"/>
+        </StackPanel>
+
+        <StackPanel>
+            <Image Source="/Games/CosmosMemory/Assets/s1.png" Width="80" HorizontalAlignment="Left" Margin="60 202"/>
+        </StackPanel>
+
+        <StackPanel>
+            <Image Source="/Games/CosmosMemory/Assets/p4.png" Width="80" HorizontalAlignment="Left" Margin="300 122"/>
+        </StackPanel>
+        
+        <StackPanel>
+            <Image Source="/Games/CosmosMemory/Assets/p3.png" Width="80" HorizontalAlignment="Right" Margin="90 500"/>
+        </StackPanel>
+
+        <StackPanel>
+            <Image Source="/Games/CosmosMemory/Assets/s2.png" Width="80" HorizontalAlignment="Right" Margin="250 650"/>
+        </StackPanel>
+
+        <StackPanel>
+            <Image Source="/Games/CosmosMemory/Assets/ovni.png" Width="80" HorizontalAlignment="Left" Margin="90 500"/>
+        </StackPanel>
+
+        <StackPanel>
+            <Image Source="/Games/CosmosMemory/Assets/p2.png" Width="80" HorizontalAlignment="Left" Margin="300 600"/>
+        </StackPanel>
+        
+        <StackPanel Margin="100 50">
+            
+            <Image Source="/Games/CosmosMemory/Assets/logo.png" Width="250"/>
+            <TextBlock Text="Cosmos Memory" TextAlignment="Center" FontSize="60" Foreground="#FFDCD2CF" Margin="20"/>
+
+            <StackPanel VerticalAlignment="Bottom">
+                <StackPanel>
+                    <Button Width="200" Height="50" FontSize="25" Margin="10" Background="#FF454DEE" BorderBrush="#00673AB7">FÁCIL</Button>
+                    <Button Width="200" Height="50" FontSize="25" Margin="10" Background="#FF454DEE" BorderBrush="#00673AB7">MÉDIO</Button>
+                    <Button Width="200" Height="50" FontSize="25" Margin="10" Background="#FF454DEE" BorderBrush="#00673AB7">DIFÍCIL</Button>
+                </StackPanel>
+            </StackPanel>
+
+        </StackPanel>
+
+        
+        
+    </Grid>
+</Window>
