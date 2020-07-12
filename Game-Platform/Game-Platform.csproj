@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +56,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DAO\PlayerDAO.cs" />
+    <Compile Include="Database\ConnectionFactory.cs" />
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Grpc.Core">
+      <Version>2.30.0</Version>
+    </PackageReference>
     <PackageReference Include="MaterialDesignColors">
       <Version>1.2.6</Version>
     </PackageReference>
@@ -127,6 +133,12 @@
   <ItemGroup>
     <Resource Include="Assets\icon.png" />
     <Resource Include="Assets\icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\falco.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\mini-falco.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

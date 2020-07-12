@@ -6,7 +6,14 @@
         xmlns:local="clr-namespace:Game_Platform.Views"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="RegisterView" Height="600" Width="800" WindowStartupLocation="CenterScreen" Background="#FF490570" ResizeMode="NoResize" WindowStyle="None">
+        Title="RegisterView"
+        Height="600" 
+        Width="800" 
+        WindowStartupLocation="CenterScreen" 
+        Background="#FF490570" 
+        ResizeMode="NoResize" 
+        WindowStyle="None"
+        Icon="/Assets/mini-falco.png">
     <Grid>
         <Border CornerRadius="10" BorderThickness="2" Margin="200 60" Background="White">
             <StackPanel>

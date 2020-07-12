@@ -1,17 +1,7 @@
-﻿using Game_Platform.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Game_Platform.DAO;
+using Game_Platform.Models;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using System.Windows.Forms;
 
 namespace Game_Platform.Views
 {
@@ -23,6 +13,8 @@ namespace Game_Platform.Views
         public RegisterView()
         {
             InitializeComponent();
+            PlayerDAO dao = new PlayerDAO();
+            dao.SelectAll();
         }
 
         private void NavigateToLoginView(object sender, RoutedEventArgs e)
@@ -35,18 +27,19 @@ namespace Game_Platform.Views
         {
             if(txtSenha.Password == txtConfSenha.Password)
             {
-                Player player = new Player();
+                Player player = new Player
+                {
+                    Username = txtUsuario.Text.Trim(),
+                    Email = txtEmail.Text.Trim(),
+                    Password = txtSenha.Password
+                };
 
-                player.Username = txtUsuario.Text.Trim();
-                player.Email = txtEmail.Text.Trim();
-                player.Password = txtSenha.Password;
+                PlayerDAO dao = new PlayerDAO();
+                dao.Insert(player);
 
-                MainWindow main = new MainWindow(player);
-                main.Show();
-                Close();
             } else
             {
-                MessageBox.Show("Senhas não coicidem");
+                System.Windows.Forms.MessageBox.Show("Senhas não coicidem");
             }
         }
     }

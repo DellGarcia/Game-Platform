@@ -11,12 +11,14 @@ namespace Game_Platform.Models
         public string Username { get; set; }
         public string Email { get;  set; }
         public string Password { get;  set; }
-        public int Score { get; set; }
+        public int Vitorias { get; set; }
+        public int Derrotas { get; set; }
         public List<Player> Friends { get; }
 
         public Player()
         {
-            Score = 0;
+            Vitorias = 0;
+            Derrotas = 0;
             Friends = new List<Player>();
         }
     }

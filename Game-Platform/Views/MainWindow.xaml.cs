@@ -33,7 +33,7 @@ namespace Game_Platform
         private void ShowPlayerInfo()
         {
             txtUsername.Text = Player.Username;
-            txtScore.Text = $"{Player.Score}";
+            txtScore.Text = $"{Player.Vitorias}";
             txtFriends.Text =  $"{Player.Friends.Count()}";
         }
 

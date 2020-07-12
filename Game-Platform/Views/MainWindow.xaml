@@ -6,11 +6,19 @@
         xmlns:local="clr-namespace:Game_Platform"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Game Platform" Height="720" Width="1080" WindowState="Maximized" Background="#FF490570" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Icon="/Assets/icon2.png">
+        Title="Game Platform" 
+        Height="720" 
+        Width="1080"
+        WindowState="Maximized" 
+        Background="#FF490570" 
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" 
+        Icon="/Assets/mini-falco.png">
     <Grid>
         <Grid Height="100" VerticalAlignment="Top" Background="White">
-            <Image Source="/Assets/icon2.png" HorizontalAlignment="Left" Margin="10 0" Width="80"/>
-            <TextBlock Text="Learn by playing ✨" Margin="10" FontSize="18" Foreground="#FF2A6088" HorizontalAlignment="Center"/>
+            <Image Source="/Assets/falco.jpg" HorizontalAlignment="Left" Margin="10 0" Width="120" Stretch="UniformToFill"/>
+            <TextBlock Text="Hunting games✨" Margin="10" FontSize="18" Foreground="#FF2A6088" HorizontalAlignment="Center"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <StackPanel VerticalAlignment="Bottom">
                     <TextBlock Text="USERNAME" Margin="10 0" FontSize="16" FontWeight="Bold" Foreground="#FF2A6088" />
