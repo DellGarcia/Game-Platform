@@ -158,7 +158,9 @@
   <ItemGroup>
     <Resource Include="Assets\mini-falco.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Database\dbGamePlatform.sql" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Games\CosmosMemory\Assets\logo.png" />
   </ItemGroup>

@@ -24,7 +24,6 @@ namespace Game_Platform.Games.CosmosMemory.Utils
             "orion.png",
             "pegasus.jpg",
             "peixes.png",
-            "sagitario.jpg",
             "touro.png",
             "virgem.jpg"
         };

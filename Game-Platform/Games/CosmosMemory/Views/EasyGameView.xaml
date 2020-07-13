@@ -18,42 +18,51 @@
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
-        <StackPanel Height="100" Background="GhostWhite" VerticalAlignment="Top">
-            <TextBlock TextAlignment="Center" FontSize="30">Macth Info</TextBlock>
+        <StackPanel Height="80" Background="GhostWhite" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal" Background="GhostWhite" VerticalAlignment="Top" HorizontalAlignment="Center">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <TextBlock Margin="100 10" FontSize="20" TextAlignment="Center" Foreground="#FF137C13">Acertos</TextBlock>
+                    <TextBlock x:Name="txtAcertos" Margin="0" FontSize="20" TextAlignment="Center">0</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <TextBlock Margin="100 10" FontSize="20" TextAlignment="Center" Foreground="#FFBD0B0B">Erros</TextBlock>
+                    <TextBlock x:Name="txtErros" Margin="0" FontSize="20" TextAlignment="Center">0</TextBlock>
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
 
         <StackPanel Margin="0 100" VerticalAlignment="Center">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <materialDesign:Card Width="200" UniformCornerRadius="5" Margin="10">
-                    <Image x:Name="card1"  Source="/Games/CosmosMemory/Assets/Constelacoes/cosmos.jpg" Cursor="Hand"/>
+                    <Image x:Name="card1"  Source="/Games/CosmosMemory/Assets/Constelacoes/cosmos.jpg" Cursor="Hand" Stretch="Fill" Height="110"/>
                 </materialDesign:Card>
                 <materialDesign:Card Width="200" UniformCornerRadius="5" Margin="10">
-                    <Image x:Name="card2" Source="/Games/CosmosMemory/Assets/Constelacoes/cosmos.jpg" Cursor="Hand"/>
+                    <Image x:Name="card2" Source="/Games/CosmosMemory/Assets/Constelacoes/cosmos.jpg" Cursor="Hand" Stretch="Fill" Height="110"/>
                 </materialDesign:Card>
                 <materialDesign:Card Width="200" UniformCornerRadius="5" Margin="10">
-                    <Image x:Name="card3" Source="/Games/CosmosMemory/Assets/Constelacoes/cosmos.jpg" Cursor="Hand"/>
+                    <Image x:Name="card3" Source="/Games/CosmosMemory/Assets/Constelacoes/cosmos.jpg" Cursor="Hand" Stretch="Fill" Height="110"/>
                 </materialDesign:Card>
                 <materialDesign:Card Width="200" UniformCornerRadius="5" Margin="10">
-                    <Image x:Name="card4" Source="/Games/CosmosMemory/Assets/Constelacoes/cosmos.jpg" Cursor="Hand"/>
+                    <Image x:Name="card4" Source="/Games/CosmosMemory/Assets/Constelacoes/cosmos.jpg" Cursor="Hand" Stretch="Fill" Height="110"/>
                 </materialDesign:Card>
 
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <materialDesign:Card Width="200" UniformCornerRadius="5" Margin="10">
-                    <Image x:Name="card5" Source="/Games/CosmosMemory/Assets/Constelacoes/cosmos.jpg" Cursor="Hand"/>
+                    <Image x:Name="card5" Source="/Games/CosmosMemory/Assets/Constelacoes/cosmos.jpg" Cursor="Hand" Stretch="Fill" Height="110"/>
                 </materialDesign:Card>
                 <materialDesign:Card Width="200" UniformCornerRadius="5" Margin="10">
-                    <Image x:Name="card6" Source="/Games/CosmosMemory/Assets/Constelacoes/cosmos.jpg" Cursor="Hand"/>
+                    <Image x:Name="card6" Source="/Games/CosmosMemory/Assets/Constelacoes/cosmos.jpg" Cursor="Hand" Stretch="Fill" Height="110"/>
                 </materialDesign:Card>
                 <materialDesign:Card Width="200" UniformCornerRadius="5" Margin="10">
-                    <Image x:Name="card7" Source="/Games/CosmosMemory/Assets/Constelacoes/cosmos.jpg" Cursor="Hand"/>
+                    <Image x:Name="card7" Source="/Games/CosmosMemory/Assets/Constelacoes/cosmos.jpg" Cursor="Hand" Stretch="Fill" Height="110"/>
                 </materialDesign:Card>
                 <materialDesign:Card Width="200" UniformCornerRadius="5" Margin="10">
-                    <Image x:Name="card8" Source="/Games/CosmosMemory/Assets/Constelacoes/cosmos.jpg" Cursor="Hand"/>
+                    <Image x:Name="card8" Source="/Games/CosmosMemory/Assets/Constelacoes/cosmos.jpg" Cursor="Hand" Stretch="Fill" Height="110"/>
                 </materialDesign:Card>
 
             </StackPanel>
-            
+
         </StackPanel>
 
     </Grid>
