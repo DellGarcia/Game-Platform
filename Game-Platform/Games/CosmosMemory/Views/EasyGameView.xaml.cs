@@ -1,17 +1,6 @@
 ﻿using Game_Platform.Games.CosmosMemory.Controller;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Game_Platform.Games.CosmosMemory.Views
 {
@@ -22,7 +11,7 @@ namespace Game_Platform.Games.CosmosMemory.Views
     {
         Image[] images;
         TextBlock[] texts;
- 
+
         public EasyGameView()
         {
             InitializeComponent();
@@ -42,9 +31,10 @@ namespace Game_Platform.Games.CosmosMemory.Views
             images[6] = card7;
             images[7] = card8;
 
-            texts = new TextBlock[2];
+            texts = new TextBlock[3];
             texts[0] = txtAcertos;
             texts[1] = txtErros;
+            texts[2] = txtTentativas;
         }
     }
 }

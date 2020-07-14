@@ -25,6 +25,10 @@
                     <TextBlock x:Name="txtAcertos" Margin="0" FontSize="20" TextAlignment="Center">0</TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <TextBlock Margin="100 10" FontSize="20" TextAlignment="Center" Foreground="#FF0E52A4">Tentativas</TextBlock>
+                    <TextBlock x:Name="txtTentativas" Margin="0" FontSize="20" TextAlignment="Center">0</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                     <TextBlock Margin="100 10" FontSize="20" TextAlignment="Center" Foreground="#FFBD0B0B">Erros</TextBlock>
                     <TextBlock x:Name="txtErros" Margin="0" FontSize="20" TextAlignment="Center">0</TextBlock>
                 </StackPanel>

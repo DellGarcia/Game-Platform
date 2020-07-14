@@ -1,14 +1,12 @@
 ﻿using Game_Platform.Games.CosmosMemory.Models;
 using Game_Platform.Games.CosmosMemory.Utils;
+using Game_Platform.Games.CosmosMemory.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
 
 namespace Game_Platform.Games.CosmosMemory.Controller
 {
@@ -18,22 +16,35 @@ namespace Game_Platform.Games.CosmosMemory.Controller
         private static Card First;
         private static Card Second;
 
+        private static int Pairs;
         private static int Acertos = 0;
         private static int Erros = 0;
+        private static int Tentativas;
 
         private static TextBlock TxtAcertos;
         private static TextBlock TxtErros;
+        private static TextBlock TxtTentativas;
 
-        public CardController(Image[] images, TextBlock[] texts) 
+        public CardController(Image[] images, TextBlock[] texts)
         {
             Cards = new List<Card>();
-            List<String> ConstellationsNames = Shuffle(SplitAndDuplicate(Shuffle(Constellations.Names.ToList<String>()), images.Length/2));
+            Pairs = images.Length / 2;
+            List<String> ConstellationsNames = Shuffle(SplitAndDuplicate(Shuffle(Constellations.Names.ToList<String>()), Pairs));
 
-            for (int i = 0; i < images.Length; i++) 
+            for (int i = 0; i < images.Length; i++)
                 Cards.Add(new Card(i, images[i], ConstellationsNames[i]));
 
             TxtAcertos = texts[0];
             TxtErros = texts[1];
+            TxtTentativas = texts[2];
+
+            Init();
+        }
+
+        private void Init()
+        {
+            Tentativas = Pairs;
+            TxtTentativas.Text = $"{Tentativas}";
         }
 
         private List<String> Shuffle(List<String> items)
@@ -53,7 +64,7 @@ namespace Game_Platform.Games.CosmosMemory.Controller
         private List<String> SplitAndDuplicate(List<String> list, int n)
         {
             List<string> Splipted = new List<string>();
-            for(int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++)
             {
                 Splipted.Add(list[i]);
                 Splipted.Add(list[i]);
@@ -76,21 +87,33 @@ namespace Game_Platform.Games.CosmosMemory.Controller
                 {
                     First.Active = false;
                     Second.Active = false;
-                    First = null;
-                    Second = null;
                     Acertos++;
                     TxtAcertos.Text = $"{Acertos}";
+
+                    if (Acertos == Pairs)
+                    {
+                        MessageBox.Show("Winner");
+                        new DialogBox().ShowDialog();
+                    }
                 }
                 else
                 {
                     await Task.Delay(200);
                     First.Flip();
                     Second.Flip();
-                    First = null;
-                    Second = null;
                     Erros++;
+                    Tentativas--;
+                    TxtTentativas.Text = $"{Tentativas}";
                     TxtErros.Text = $"{Erros}";
+
+                    if (Tentativas == 0)
+                    {
+                        MessageBox.Show("You Lose");
+                    }
                 }
+
+                First = null;
+                Second = null;
             }
         }
     }

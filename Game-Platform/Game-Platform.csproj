@@ -62,6 +62,9 @@
     <Compile Include="Games\CosmosMemory\Models\Card.cs" />
     <Compile Include="Games\CosmosMemory\Models\Difficulties.cs" />
     <Compile Include="Games\CosmosMemory\Utils\Constellations.cs" />
+    <Compile Include="Games\CosmosMemory\Views\DialogBox.xaml.cs">
+      <DependentUpon>DialogBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Games\CosmosMemory\Views\EasyGameView.xaml.cs">
       <DependentUpon>EasyGameView.xaml</DependentUpon>
     </Compile>
@@ -74,6 +77,10 @@
     <Compile Include="Views\RegisterView.xaml.cs">
       <DependentUpon>RegisterView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Games\CosmosMemory\Views\DialogBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Games\CosmosMemory\Views\EasyGameView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
