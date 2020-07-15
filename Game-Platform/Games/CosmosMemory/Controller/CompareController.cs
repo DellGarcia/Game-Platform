@@ -43,6 +43,7 @@ namespace Game_Platform.Games.CosmosMemory.Controller
         public void Exit(object obj, RoutedEventArgs args)
         {
             Dialog.Close();
+            MainWindow.GetINSTANCE().Show();
             CardController.window.Close();
         }
 

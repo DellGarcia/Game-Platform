@@ -18,7 +18,7 @@
     <Grid>
         <Grid Height="100" VerticalAlignment="Top" Background="White">
             <Image Source="/Assets/falco.jpg" HorizontalAlignment="Left" Margin="10 0" Width="120" Stretch="UniformToFill"/>
-            <TextBlock Text="Hunting games✨" Margin="10" FontSize="18" Foreground="#FF2A6088" HorizontalAlignment="Center"/>
+            <TextBlock Text="Hunting for games" Margin="10" FontSize="18" Foreground="#FF2A6088" HorizontalAlignment="Center"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <StackPanel VerticalAlignment="Bottom">
                     <TextBlock Text="USERNAME" Margin="10 0" FontSize="16" FontWeight="Bold" Foreground="#FF2A6088" />
@@ -59,7 +59,7 @@
             <TextBlock Text="Avaliable Games" FontSize="25" Foreground="White" TextAlignment="Center" Width="500" Margin="0 200 0 0"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <materialDesign:Card Width="200" Height="120" Margin="15" BorderThickness="0">
-                <Image Source="/Assets/CosmosMemory.png" Stretch="Fill"/>
+                <Image Source="/Assets/CosmosMemory.png" Stretch="Fill" MouseLeftButtonUp="PlayCosmosMemory"/>
             </materialDesign:Card>
             <materialDesign:Card Width="200" Height="120" Margin="15"/>
             </StackPanel>

@@ -1,19 +1,9 @@
 ﻿using Game_Platform.DAO;
 using Game_Platform.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics.Eventing.Reader;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Forms;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using KeyEventArgs = System.Windows.Input.KeyEventArgs;
 
 namespace Game_Platform.Views
@@ -26,6 +16,12 @@ namespace Game_Platform.Views
         public LoginView()
         {
             InitializeComponent();
+            
+            if(Application.Current.Properties["loggedPlayer"] != null)
+            {
+                MainWindow.GetINSTANCE().Show();
+                Close();
+            }
         }
 
         private void NavigateToRegisterView(object sender, RoutedEventArgs e)
@@ -45,18 +41,19 @@ namespace Game_Platform.Views
             {
                 if (player.Password == password)
                 {
-                    MainWindow main = new MainWindow(player);
+                    Application.Current.Properties["loggedPlayer"] = player;
+                    Window main = MainWindow.GetINSTANCE();
                     main.Show();
                     Close();
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("Senha incorreta");
+                    MessageBox.Show("Senha incorreta");
                 }
             }
             else
             {
-                System.Windows.Forms.MessageBox.Show("Email não cadastrado");
+                MessageBox.Show("Email não cadastrado");
             }
         }
 
@@ -69,7 +66,7 @@ namespace Game_Platform.Views
         {
             if (e.Key == Key.Enter)
             {
-               LoginAction();
+                LoginAction();
             }
         }
     }

@@ -1,14 +1,5 @@
-﻿using Game_Platform.Games.CosmosMemory.Controller;
-using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Controls;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace Game_Platform.Games.CosmosMemory.Models
@@ -17,16 +8,18 @@ namespace Game_Platform.Games.CosmosMemory.Models
     {
         public int Id { get; set; }
         public Image Component { get; set; }
+        public TextBlock Label { get; set; }
         public string Constellation { get; private set; }
         public static readonly string resourcePath = "/Games/CosmosMemory/Assets/Constelacoes/";
         public readonly string TurnDownImage = $"{resourcePath}cosmos.jpg";
         public bool Active;
         public bool TurnUp { get; set; }
 
-        public Card(int id, Image component, string constellationName)
+        public Card(int id, Image component, TextBlock label, string constellationName)
         {
             Id = id;
             Component = component;
+            Label = label;
             Constellation = constellationName;
             Active = true;
             TurnUp = false;
