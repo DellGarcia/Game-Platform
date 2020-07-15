@@ -58,16 +58,44 @@
     </ApplicationDefinition>
     <Compile Include="DAO\PlayerDAO.cs" />
     <Compile Include="Database\ConnectionFactory.cs" />
-    <Compile Include="Games\CosmosMemory\Views\CosmosMemoryInitView.xaml.cs">
-      <DependentUpon>CosmosMemoryInitView.xaml</DependentUpon>
+    <Compile Include="Games\CosmosMemory\Controller\CardController.cs" />
+    <Compile Include="Games\CosmosMemory\Controller\CompareController.cs" />
+    <Compile Include="Games\CosmosMemory\Models\Card.cs" />
+    <Compile Include="Games\CosmosMemory\Models\Difficulties.cs" />
+    <Compile Include="Games\CosmosMemory\Utils\Constellations.cs" />
+    <Compile Include="Games\CosmosMemory\Utils\Methods.cs" />
+    <Compile Include="Games\CosmosMemory\Views\DialogBox.xaml.cs">
+      <DependentUpon>DialogBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Games\CosmosMemory\Views\EasyGameView.xaml.cs">
+      <DependentUpon>EasyGameView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Games\CosmosMemory\Views\InitView.xaml.cs">
+      <DependentUpon>InitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Games\CosmosMemory\Views\HardGameView.xaml.cs">
+      <DependentUpon>HardGameView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\MD5HashString.cs" />
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RegisterView.xaml.cs">
       <DependentUpon>RegisterView.xaml</DependentUpon>
     </Compile>
-    <Page Include="Games\CosmosMemory\Views\CosmosMemoryInitView.xaml">
+    <Page Include="Games\CosmosMemory\Views\DialogBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Games\CosmosMemory\Views\EasyGameView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Games\CosmosMemory\Views\InitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Games\CosmosMemory\Views\HardGameView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -148,7 +176,7 @@
     <Resource Include="Assets\mini-falco.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Games\CosmosMemory\Models\" />
+    <Content Include="Database\dbGamePlatform.sql" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Games\CosmosMemory\Assets\logo.png" />
@@ -172,6 +200,29 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Games\CosmosMemory\Assets\galaxia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\andromeda.jpg" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\aquario.png" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\aries.png" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\cancer.png" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\capricornio.png" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\cisne.png" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\dragao.jpg" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\escorpiao.png" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\fenix.png" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\gemeos.jpg" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\leao.png" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\libra.png" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\orion.png" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\pegasus.jpg" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\peixes.png" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\sagitario.jpg" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\touro.png" />
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\virgem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Games\CosmosMemory\Assets\Constelacoes\cosmos.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

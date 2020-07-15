@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -40,6 +41,11 @@ namespace Game_Platform
         private void HandleExit(object sender, MouseButtonEventArgs e)
         {
             Close();
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri($"https://www.gravatar.com/avatar/{Player.HashEmail}?d=robohash", UriKind.Relative);
+            image.EndInit();
+            imgGravatar.ImageSource = image;
         }
     }
 }

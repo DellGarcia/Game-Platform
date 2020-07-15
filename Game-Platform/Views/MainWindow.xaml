@@ -35,7 +35,7 @@
             </StackPanel>
             <Image Source="/Assets/turn-off-dark.png"  Width="30" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Top" MouseLeftButtonDown="HandleExit"/>
         </Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="20 50" >
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="60 20" >
             <StackPanel HorizontalAlignment="Right">
                 <Ellipse Height="65" Width="68" StrokeThickness="4">
                     <Ellipse.Stroke>
@@ -45,76 +45,28 @@
                         </LinearGradientBrush>
                     </Ellipse.Stroke>
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="https://www.gravatar.com/avatar/027f46d686bf211688b065a27de8f985?d=robohash" Stretch="UniformToFill"/>
+                        <ImageBrush x:Name="imgGravatar" ImageSource="https://www.gravatar.com/avatar/027f46d686bf211688b065a27de8f985?d=robohash" Stretch="UniformToFill"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Button HorizontalAlignment="Center" Margin="10" Content="Edit Profile" Background="{x:Null}" BorderBrush="White"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10 110">
             <TextBox Width="150" materialDesign:HintAssist.Hint="SEARCH" Foreground="White"/>
             <materialDesign:PackIcon Kind="AccountSearch" Foreground="White" VerticalAlignment="Center"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Right">
-            <TextBlock Text="Your  Friends" FontSize="20" Foreground="White" TextAlignment="Center" Width="500" Margin="0 200 0 0"/>
-            <ListView Height="200" HorizontalAlignment="Left" Margin="0 10 0 0">
-                <ListViewItem Height="50" Width="500">
-                    <Grid Height="30" Width="500">
-                        <Ellipse Width="30" Height="30" StrokeThickness="0.5" Stroke="WHITE" HorizontalAlignment="Left">
-                            <Ellipse.Fill>
-                                <ImageBrush ImageSource="https://www.gravatar.com/avatar/89321837213789128129783890129867?d=robohash" Stretch="UniformToFill"/>
-                            </Ellipse.Fill>
-                        </Ellipse>
-                        <TextBlock HorizontalAlignment="Left"  Margin="35 0" Text="Your friend John is on instagram as John_J" FontSize="14" TextWrapping="Wrap"/>
-                        <Button HorizontalAlignment="Right" Content="FOLLOW" FontSize="10" Margin="20 0" Height="20" Padding="10 0"/>
-                    </Grid>
-                </ListViewItem>
-                <ListViewItem Height="50" Width="500">
-                    <Grid Height="30" Width="500">
-                        <Ellipse Width="30" Height="30" StrokeThickness="0.5" Stroke="White" HorizontalAlignment="Left">
-                            <Ellipse.Fill>
-                                <ImageBrush ImageSource="https://www.gravatar.com/avatar/247234y2834678234678?d=robohash" Stretch="UniformToFill"/>
-                            </Ellipse.Fill>
-                        </Ellipse>
-                        <TextBlock HorizontalAlignment="Left"  Margin="35 0" Text="Your friend John is on instagram as John_J" FontSize="14" TextWrapping="Wrap"/>
-                        <Button HorizontalAlignment="Right" Content="FOLLOW" FontSize="10" Margin="20 0" Height="20" Padding="10 0"/>
-                    </Grid>
-                </ListViewItem>
-                <ListViewItem Height="50" Width="500">
-                    <Grid Height="30" Width="500">
-                        <Ellipse Width="30" Height="30" StrokeThickness="0.5" Stroke="White" HorizontalAlignment="Left">
-                            <Ellipse.Fill>
-                                <ImageBrush ImageSource="https://www.gravatar.com/avatar/42498723748923748923748?d=robohash" Stretch="UniformToFill"/>
-                            </Ellipse.Fill>
-                        </Ellipse>
-                        <TextBlock HorizontalAlignment="Left"  Margin="35 0" Text="Your friend John is on instagram as John_J" FontSize="14" TextWrapping="Wrap"/>
-                        <Button HorizontalAlignment="Right" Content="FOLLOW" FontSize="10" Margin="20 0" Height="20" Padding="10 0"/>
-                    </Grid>
-                </ListViewItem>
-                <ListViewItem Height="50" Width="500">
-                    <Grid Height="30" Width="500">
-                        <Ellipse Width="30" Height="30" StrokeThickness="0.5" Stroke="White" HorizontalAlignment="Left">
-                            <Ellipse.Fill>
-                                <ImageBrush ImageSource="https://www.gravatar.com/avatar/7432173891278372197398?d=robohash" Stretch="UniformToFill"/>
-                            </Ellipse.Fill>
-                        </Ellipse>
-                        <TextBlock HorizontalAlignment="Left"  Margin="35 0" Text="Your friend John is on instagram as John_J" FontSize="14" TextWrapping="Wrap"/>
-                        <Button HorizontalAlignment="Right" Content="FOLLOW" FontSize="10" Margin="20 0" Height="20" Padding="10 0"/>
-                    </Grid>
-                </ListViewItem>
-            </ListView>
-        </StackPanel>
-        <StackPanel HorizontalAlignment="Left">
-            
-                <TextBlock Text="Avaliable Games" FontSize="20" Foreground="White" TextAlignment="Center" Width="500" Margin="0 200 0 0"/>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <materialDesign:Card Width="150" Height="100" Margin="15"/>
-                    <materialDesign:Card Width="150" Height="100" Margin="15"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <materialDesign:Card Width="150" Height="100" Margin="15"/>
-                    <materialDesign:Card Width="150" Height="100" Margin="15"/>
-                </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Avaliable Games" FontSize="25" Foreground="White" TextAlignment="Center" Width="500" Margin="0 200 0 0"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <materialDesign:Card Width="200" Height="120" Margin="15" BorderThickness="0">
+                <Image Source="/Assets/CosmosMemory.png" Stretch="Fill"/>
+            </materialDesign:Card>
+            <materialDesign:Card Width="200" Height="120" Margin="15"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <materialDesign:Card Width="200" Height="120" Margin="15"/>
+                <materialDesign:Card Width="200" Height="120" Margin="15"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

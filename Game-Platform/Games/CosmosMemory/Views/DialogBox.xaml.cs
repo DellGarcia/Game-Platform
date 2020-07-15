@@ -15,13 +15,20 @@ using System.Windows.Shapes;
 namespace Game_Platform.Games.CosmosMemory.Views
 {
     /// <summary>
-    /// Lógica interna para CosmosMemoryMainView.xaml
+    /// Lógica interna para DialogBox.xaml
     /// </summary>
-    public partial class CosmosMemoryInitView : Window
+    public partial class DialogBox : Window
     {
-        public CosmosMemoryInitView()
+
+        public DialogBox()
         {
             InitializeComponent();
         }
+
+        public void SetMessage(String message)
+        {
+            txtMensagem.Text = message;
+        }
+
     }
 }
