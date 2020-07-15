@@ -7,13 +7,20 @@
         mc:Ignorable="d"
         Title="Fim de Jogo" Height="250" Width="500" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/Game-Platform;component/Assets/falco.jpg" Background="#FF251753">
     <Grid>
-        <StackPanel>
-            <TextBlock x:Name="txtMensagem" Text="Fim do Jogo, Voce Ganhou" FontSize="30" TextAlignment="Center" Foreground="GhostWhite" Margin="15 30"/>
-        </StackPanel>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 40">
-            <Button x:Name="btnSair" Width="180" Height="40" Margin="15" Background="#FF5E4587" BorderBrush="#00673AB7" FontSize="16">Sair</Button>
-            <Button x:Name="btnAgain" Width="180" Height="40" Margin="15" BorderBrush="#005E4587" FontSize="16" Background="#FF5E4587">Jogar Novamente</Button>
-        </StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="txtMensagem" Text="Fim do Jogo, Voce Ganhou" FontSize="30" TextAlignment="Center" Foreground="GhostWhite" Margin="15 30"/>
+
+        <Button Grid.Row="1" Grid.Column="0" x:Name="btnSair" Width="180" Height="40" Margin="15" Background="#FF5E4587" BorderBrush="#00673AB7" FontSize="16">Sair</Button>
+        <Button Grid.Row="1" Grid.Column="1" x:Name="btnAgain" Width="180" Height="40" Margin="15" BorderBrush="#005E4587" FontSize="16" Background="#FF5E4587">Jogar Novamente</Button>
+
     </Grid>
 </Window>

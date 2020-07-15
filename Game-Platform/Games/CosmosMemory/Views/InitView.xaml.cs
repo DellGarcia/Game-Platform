@@ -23,5 +23,17 @@ namespace Game_Platform.Games.CosmosMemory.Views
         {
             InitializeComponent();
         }
+
+        private void OpenEasyGame(object sender, RoutedEventArgs e)
+        {
+            new EasyGameView().Show();
+            this.Close();
+        }
+
+        private void OpenHardGame(object sender, RoutedEventArgs e)
+        {
+            new HardGameView().Show();
+            this.Close();
+        }
     }
 }

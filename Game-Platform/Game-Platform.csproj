@@ -59,9 +59,11 @@
     <Compile Include="DAO\PlayerDAO.cs" />
     <Compile Include="Database\ConnectionFactory.cs" />
     <Compile Include="Games\CosmosMemory\Controller\CardController.cs" />
+    <Compile Include="Games\CosmosMemory\Controller\CompareController.cs" />
     <Compile Include="Games\CosmosMemory\Models\Card.cs" />
     <Compile Include="Games\CosmosMemory\Models\Difficulties.cs" />
     <Compile Include="Games\CosmosMemory\Utils\Constellations.cs" />
+    <Compile Include="Games\CosmosMemory\Utils\Methods.cs" />
     <Compile Include="Games\CosmosMemory\Views\DialogBox.xaml.cs">
       <DependentUpon>DialogBox.xaml</DependentUpon>
     </Compile>
@@ -71,6 +73,10 @@
     <Compile Include="Games\CosmosMemory\Views\InitView.xaml.cs">
       <DependentUpon>InitView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Games\CosmosMemory\Views\HardGameView.xaml.cs">
+      <DependentUpon>HardGameView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\MD5HashString.cs" />
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
@@ -86,6 +92,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Games\CosmosMemory\Views\InitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Games\CosmosMemory\Views\HardGameView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

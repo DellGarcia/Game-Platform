@@ -5,14 +5,14 @@ using System.Windows.Controls;
 namespace Game_Platform.Games.CosmosMemory.Views
 {
     /// <summary>
-    /// Lógica interna para EasyGameView.xaml
+    /// Lógica interna para MediumGameView.xaml
     /// </summary>
-    public partial class EasyGameView : Window
+    public partial class HardGameView : Window
     {
         Image[] images;
         TextBlock[] texts;
 
-        public EasyGameView()
+        public HardGameView()
         {
             InitializeComponent();
             Init();
@@ -21,7 +21,7 @@ namespace Game_Platform.Games.CosmosMemory.Views
 
         private void Init()
         {
-            images = new Image[8];
+            images = new Image[16];
             images[0] = card1;
             images[1] = card2;
             images[2] = card3;
@@ -30,6 +30,14 @@ namespace Game_Platform.Games.CosmosMemory.Views
             images[5] = card6;
             images[6] = card7;
             images[7] = card8;
+            images[8] = card9;
+            images[9] = card10;
+            images[10] = card11;
+            images[11] = card12;
+            images[12] = card13;
+            images[13] = card14;
+            images[14] = card15;
+            images[15] = card16;
 
             texts = new TextBlock[3];
             texts[0] = txtAcertos;

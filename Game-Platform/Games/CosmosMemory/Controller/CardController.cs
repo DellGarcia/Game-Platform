@@ -7,114 +7,66 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace Game_Platform.Games.CosmosMemory.Controller
 {
     public class CardController
     {
-        readonly List<Card> Cards;
-        private static Card First;
-        private static Card Second;
+        private readonly List<Card> Cards;
+        internal static Window window;
 
-        private static int Pairs;
-        private static int Acertos = 0;
-        private static int Erros = 0;
-        private static int Tentativas;
+        private readonly CompareController Comparator;
 
-        private static TextBlock TxtAcertos;
-        private static TextBlock TxtErros;
-        private static TextBlock TxtTentativas;
-
-        public CardController(Image[] images, TextBlock[] texts)
+        public CardController(Window window, Image[] images, TextBlock[] texts)
         {
+            CardController.window = window;
             Cards = new List<Card>();
-            Pairs = images.Length / 2;
-            List<String> ConstellationsNames = Shuffle(SplitAndDuplicate(Shuffle(Constellations.Names.ToList<String>()), Pairs));
+
+            Comparator = new CompareController
+            {
+                Pairs = images.Length / 2,
+                TxtAcertos = texts[0],
+                TxtErros = texts[1],
+                TxtTentativas = texts[2],
+
+                Dialog = new DialogBox()
+            };
+            Comparator.Init();
+
+            List<String> ConstellationsNames = 
+                Methods.Shuffle(
+                    Methods.SplitAndDuplicate(
+                        Methods.Shuffle(Constellations.Names.ToList<String>()), Comparator.Pairs));
 
             for (int i = 0; i < images.Length; i++)
-                Cards.Add(new Card(i, images[i], ConstellationsNames[i]));
-
-            TxtAcertos = texts[0];
-            TxtErros = texts[1];
-            TxtTentativas = texts[2];
-
-            Init();
-        }
-
-        private void Init()
-        {
-            Tentativas = Pairs;
-            TxtTentativas.Text = $"{Tentativas}";
-        }
-
-        private List<String> Shuffle(List<String> items)
-        {
-            var list = items;
-            var rnd = new Random();
-
-            var query =
-                from i in list
-                let r = rnd.Next()
-                orderby r
-                select i;
-
-            return query.ToList();
-        }
-
-        private List<String> SplitAndDuplicate(List<String> list, int n)
-        {
-            List<string> Splipted = new List<string>();
-            for (int i = 0; i < n; i++)
             {
-                Splipted.Add(list[i]);
-                Splipted.Add(list[i]);
+                Card card = new Card(i, images[i], ConstellationsNames[i]);
+                card.Component.MouseLeftButtonUp += new MouseButtonEventHandler(Click);
+                Cards.Add(card);
             }
-            return Splipted;
+
         }
 
-        public static async void Compare(Card card)
+        private void Click(Object o, MouseButtonEventArgs args)
         {
+            Image image = (Image) o;
 
-            if (First == null)
+            foreach(Card card in Cards)
             {
-                First = card;
-            }
-            else
-            {
-                Second = card;
+                if (card.Component != image)
+                    continue;
 
-                if (First.Constellation == Second.Constellation)
+                if (card.Active && !card.TurnUp)
                 {
-                    First.Active = false;
-                    Second.Active = false;
-                    Acertos++;
-                    TxtAcertos.Text = $"{Acertos}";
+                    card.Flip();
 
-                    if (Acertos == Pairs)
-                    {
-                        MessageBox.Show("Winner");
-                        new DialogBox().ShowDialog();
-                    }
+                    if (card.TurnUp)
+                        Comparator.Compare(card);
                 }
-                else
-                {
-                    await Task.Delay(200);
-                    First.Flip();
-                    Second.Flip();
-                    Erros++;
-                    Tentativas--;
-                    TxtTentativas.Text = $"{Tentativas}";
-                    TxtErros.Text = $"{Erros}";
-
-                    if (Tentativas == 0)
-                    {
-                        MessageBox.Show("You Lose");
-                    }
-                }
-
-                First = null;
-                Second = null;
+                break;
             }
         }
+
     }
 }

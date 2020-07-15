@@ -19,20 +19,16 @@ namespace Game_Platform.Games.CosmosMemory.Views
     /// </summary>
     public partial class DialogBox : Window
     {
-        private readonly string Message;
 
-        public DialogBox(String mensagem)
+        public DialogBox()
         {
             InitializeComponent();
-
-            Message = mensagem;
-            Init();
         }
 
-        private void Init()
+        public void SetMessage(String message)
         {
-            txtMensagem.Text = Message;
-            btnSair.Click += new RoutedEventHandler();
+            txtMensagem.Text = message;
         }
+
     }
 }
