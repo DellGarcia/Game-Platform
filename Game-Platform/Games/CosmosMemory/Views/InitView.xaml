@@ -58,7 +58,6 @@
                 <StackPanel>
                     <Button Width="200" Height="50" FontSize="23" Margin="10" Background="#FF454DEE" BorderBrush="#00673AB7" Click="OpenEasyGame">FÁCIL</Button>
                     <Button Width="200" Height="50" FontSize="23" Margin="10" Background="#FF454DEE" BorderBrush="#00673AB7" Click="OpenHardGame">DIFÍCIL</Button>
-                    <Button Width="200" Height="50" FontSize="23" Margin="10" Background="#FF454DEE" BorderBrush="#00673AB7" Click="OpenAboutPage">SOBRE</Button>
                 </StackPanel>
             </StackPanel>
 

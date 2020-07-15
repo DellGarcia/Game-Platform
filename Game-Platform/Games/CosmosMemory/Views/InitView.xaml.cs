@@ -35,10 +35,5 @@ namespace Game_Platform.Games.CosmosMemory.Views
             new HardGameView().Show();
             this.Close();
         }
-
-        private void OpenAboutPage(object sender, RoutedEventArgs e)
-        {
-            new AboutPage().ShowDialog();
-        }
     }
 }
