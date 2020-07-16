@@ -187,6 +187,7 @@
     <Resource Include="Assets\Screens\EasyGame.png" />
     <Resource Include="Assets\Screens\HardGame.png" />
     <Resource Include="Assets\Screens\InitView.png" />
+    <Resource Include="Assets\Screens\AboutPage.png" />
     <Content Include="Database\dbGamePlatform.sql" />
   </ItemGroup>
   <ItemGroup>
