@@ -184,6 +184,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\CosmosMemory.png" />
+    <Resource Include="Assets\Screens\EasyGame.png" />
+    <Resource Include="Assets\Screens\HardGame.png" />
+    <Resource Include="Assets\Screens\InitView.png" />
     <Content Include="Database\dbGamePlatform.sql" />
   </ItemGroup>
   <ItemGroup>
