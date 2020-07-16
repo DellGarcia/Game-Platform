@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Game_Platform.Games.CosmosMemory.Utils
 {
-    public class Constellations
+    public static class Constellations
     {
-        public static string[] Names = { 
+        public static string[] Names { get; } = {
             "andromeda.jpg",
             "aquario.png",
             "aries.png",

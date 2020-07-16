@@ -11,8 +11,8 @@ namespace Game_Platform.Games.CosmosMemory.Models
         public TextBlock Label { get; set; }
         public string Constellation { get; private set; }
         public static readonly string resourcePath = "/Games/CosmosMemory/Assets/Constelacoes/";
-        public readonly string TurnDownImage = $"{resourcePath}cosmos.jpg";
-        public bool Active;
+        private readonly string TurnDownImage = $"{resourcePath}cosmos.jpg";
+        public bool Active { get; set; }
         public bool TurnUp { get; set; }
 
         public Card(int id, Image component, TextBlock label, string constellationName)

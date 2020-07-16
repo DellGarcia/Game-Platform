@@ -33,15 +33,17 @@ namespace Game_Platform
                 return new LoginView();
 
             if (INSTANCE == null)
+            {
                 INSTANCE = new MainWindow((Player)Application.Current.Properties["loggedPlayer"]);
+            }
+               
 
             return INSTANCE;
         }
 
-        public void DestroyInstance()
+        public static void DestroyInstance()
         {
             INSTANCE.Close();
-            INSTANCE = null;
         }
 
         private void ShowPlayerInfo()

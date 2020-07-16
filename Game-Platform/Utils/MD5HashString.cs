@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Game_Platform.Utils
 {
-    public class MD5HashString
+    public static class MD5HashString
     {
         public static string GetMd5Hash(MD5 md5Hash, string input)
         {

@@ -14,7 +14,7 @@ namespace Game_Platform.Games.CosmosMemory.Controller
     public class CardController
     {
         private readonly List<Card> Cards;
-        internal static Window window;
+        public static Window window;
 
         private readonly CompareController Comparator;
 
@@ -94,7 +94,9 @@ namespace Game_Platform.Games.CosmosMemory.Controller
             foreach (Card card in Cards)
             {
                 if (card.Component != image)
+                {
                     continue;
+                }
 
                 return card;
             }

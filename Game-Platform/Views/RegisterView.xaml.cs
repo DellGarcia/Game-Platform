@@ -61,7 +61,6 @@ namespace Game_Platform.Views
             if(e.Key == Key.Enter)
             {
                 System.Windows.Forms.MessageBox.Show("Enter");
-                //RegisterAction();
             }
             System.Windows.Forms.MessageBox.Show("Click");
         }

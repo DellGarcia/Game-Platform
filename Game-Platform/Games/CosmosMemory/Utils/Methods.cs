@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Game_Platform.Games.CosmosMemory.Utils
 {
-    public class Methods
+    public static class Methods
     {
         public static List<String> Shuffle(List<String> items)
         {
