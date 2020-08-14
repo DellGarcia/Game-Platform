@@ -13,25 +13,13 @@ namespace Game_Platform.Games.Forca.Views
         public InitView()
         {
             InitializeComponent();
-            GetCode();
+            ApiRequest.LoadCountries();
         }
 
-        public static async void GetCode()
+        private void StartGame(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                var response = RestService.For<IAlphaCode>("https://restcountries.eu");
-
-                MessageBox.Show("Consultando API");
-                var codes = await response.GetAsyncAlphaCode();
-
-                MessageBox.Show(codes[0].Alpha2Code);
-
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Erro " + e.Message);
-            }
+            new MainView().Show();
+            this.Close();
         }
     }
 }

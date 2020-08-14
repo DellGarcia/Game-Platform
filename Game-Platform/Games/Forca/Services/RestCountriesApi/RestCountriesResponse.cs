@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Game_Platform.Games.Forca.Services.RestCountriesApi
 {
-    public class AlphaCodeResponse
+    public class RestCountriesResponse
     {
         [JsonProperty("name")]
         public string Name { get; set; }

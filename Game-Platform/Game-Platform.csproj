@@ -63,7 +63,7 @@
     <Compile Include="Games\CosmosMemory\Models\Card.cs" />
     <Compile Include="Games\CosmosMemory\Models\Difficulties.cs" />
     <Compile Include="Games\CosmosMemory\Utils\Constellations.cs" />
-    <Compile Include="Games\CosmosMemory\Utils\Methods.cs" />
+    <Compile Include="Utils\Methods.cs" />
     <Compile Include="Games\CosmosMemory\Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
@@ -79,10 +79,14 @@
     <Compile Include="Games\CosmosMemory\Views\HardGameView.xaml.cs">
       <DependentUpon>HardGameView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Games\Forca\Services\RestCountriesApi\AlphaCode\AlphaCodeResponse.cs" />
-    <Compile Include="Games\Forca\Services\RestCountriesApi\AlphaCode\IAlphaCode.cs" />
+    <Compile Include="Games\Forca\Services\RestCountriesApi\RestCountriesResponse.cs" />
+    <Compile Include="Games\Forca\Services\RestCountriesApi\ApiRequest.cs" />
+    <Compile Include="Games\Forca\Services\RestCountriesApi\IRestCountries.cs" />
     <Compile Include="Games\Forca\Views\InitView.xaml.cs">
       <DependentUpon>InitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Games\Forca\Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utils\MD5HashString.cs" />
     <Compile Include="Views\LoginView.xaml.cs">
@@ -112,6 +116,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Games\Forca\Views\InitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Games\Forca\Views\MainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
