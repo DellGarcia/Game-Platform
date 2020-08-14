@@ -4,9 +4,7 @@ using System.Windows.Controls;
 
 namespace Game_Platform.Games.CosmosMemory.Views
 {
-    /// <summary>
-    /// Lógica interna para EasyGameView.xaml
-    /// </summary>
+    
     public partial class EasyGameView : Window
     {
         Image[] images;
