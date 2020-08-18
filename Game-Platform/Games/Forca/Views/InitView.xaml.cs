@@ -1,6 +1,4 @@
 ﻿using Game_Platform.Games.Forca.Services.RestCountriesApi.AlphaCode;
-using Refit;
-using System;
 using System.Windows;
 
 namespace Game_Platform.Games.Forca.Views
@@ -18,8 +16,8 @@ namespace Game_Platform.Games.Forca.Views
 
         private void StartGame(object sender, RoutedEventArgs e)
         {
-            new MainView().Show();
-            this.Close();
+            AwaitView.Create().Show();
+            Close();
         }
     }
 }

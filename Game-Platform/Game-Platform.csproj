@@ -63,6 +63,12 @@
     <Compile Include="Games\CosmosMemory\Models\Card.cs" />
     <Compile Include="Games\CosmosMemory\Models\Difficulties.cs" />
     <Compile Include="Games\CosmosMemory\Utils\Constellations.cs" />
+    <Compile Include="Games\Forca\Controllers\AttemptController.cs" />
+    <Compile Include="Games\Forca\Controllers\GameController.cs" />
+    <Compile Include="Games\Forca\Controllers\KeyBoardController.cs" />
+    <Compile Include="Games\Forca\Views\AwaitView.xaml.cs">
+      <DependentUpon>AwaitView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Methods.cs" />
     <Compile Include="Games\CosmosMemory\Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
@@ -112,6 +118,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Games\CosmosMemory\Views\HardGameView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Games\Forca\Views\AwaitView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -291,6 +301,8 @@
   <ItemGroup>
     <Resource Include="Games\CosmosMemory\Assets\Constelacoes\cosmos.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Games\Forca\Models\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

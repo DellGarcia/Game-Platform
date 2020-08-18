@@ -13,8 +13,6 @@ namespace Game_Platform.Games.Forca.Views
         public MainView()
         {
             InitializeComponent();
-            Country.Text = ApiRequest.Countries[Index].Name;
-            Index++;
         }
 
         private void NextCountry(object sender, RoutedEventArgs e)
