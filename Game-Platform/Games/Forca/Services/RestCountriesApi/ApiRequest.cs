@@ -2,14 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Game_Platform.Games.Forca.Services.RestCountriesApi.AlphaCode
 {
     public static class ApiRequest
     {
-
+        
         public static List<RestCountriesResponse> Countries { get; private set; }
 
         public static async void LoadCountries()

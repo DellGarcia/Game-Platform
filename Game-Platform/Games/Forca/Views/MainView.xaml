@@ -15,9 +15,11 @@
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock x:Name="Country" FontSize="50">Pais Sorteado</TextBlock>
-            <Button Margin="50" FontSize="20" Height="40" Click="NextCountry">Next</Button>
+        <StackPanel>
+            <TextBlock>Tentativas: <TextBlock x:Name="Attemps" /></TextBlock>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock TextAlignment="Center" Text="_ _ _ _ _ _" x:Name="Country" FontSize="60" Typography.Capitals="AllSmallCaps" TextDecorations="{x:Null}"/>
         </StackPanel>
         <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Border BorderThickness="2" BorderBrush="Black" Margin="10" CornerRadius="5" MaxWidth="1080">
@@ -40,35 +42,35 @@
                         <RowDefinition Height="1*" />
                     </Grid.RowDefinitions>
 
-                    <Button Grid.Column="0" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">Q</Button>
-                    <Button Grid.Column="1" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">W</Button>
-                    <Button Grid.Column="2" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">E</Button>
-                    <Button Grid.Column="3" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">R</Button>
-                    <Button Grid.Column="4" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">T</Button>
-                    <Button Grid.Column="5" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">Y</Button>
-                    <Button Grid.Column="6" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">U</Button>
-                    <Button Grid.Column="7" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">I</Button>
-                    <Button Grid.Column="8" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">O</Button>
-                    <Button Grid.Column="9" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">P</Button>
+                    <Button x:Name="btn1" Grid.Column="0" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">Q</Button>
+                    <Button x:Name="btn2" Grid.Column="1" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">W</Button>
+                    <Button x:Name="btn3" Grid.Column="2" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">E</Button>
+                    <Button x:Name="btn4" Grid.Column="3" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">R</Button>
+                    <Button x:Name="btn5" Grid.Column="4" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">T</Button>
+                    <Button x:Name="btn6" Grid.Column="5" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">Y</Button>
+                    <Button x:Name="btn7" Grid.Column="6" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">U</Button>
+                    <Button x:Name="btn8" Grid.Column="7" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">I</Button>
+                    <Button x:Name="btn9" Grid.Column="8" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">O</Button>
+                    <Button x:Name="btn10" Grid.Column="9" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">P</Button>
 
-                    <Button Grid.Row="1" Grid.Column="0" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">A</Button>
-                    <Button Grid.Row="1" Grid.Column="1" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">S</Button>
-                    <Button Grid.Row="1" Grid.Column="2" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">D</Button>
-                    <Button Grid.Row="1" Grid.Column="3" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">F</Button>
-                    <Button Grid.Row="1" Grid.Column="4" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">G</Button>
-                    <Button Grid.Row="1" Grid.Column="5" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">H</Button>
-                    <Button Grid.Row="1" Grid.Column="6" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">J</Button>
-                    <Button Grid.Row="1" Grid.Column="7" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">K</Button>
-                    <Button Grid.Row="1" Grid.Column="8" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">L</Button>
+                    <Button x:Name="btn11" Grid.Row="1" Grid.Column="0" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">A</Button>
+                    <Button x:Name="btn12" Grid.Row="1" Grid.Column="1" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">S</Button>
+                    <Button x:Name="btn13" Grid.Row="1" Grid.Column="2" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">D</Button>
+                    <Button x:Name="btn14" Grid.Row="1" Grid.Column="3" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">F</Button>
+                    <Button x:Name="btn15" Grid.Row="1" Grid.Column="4" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">G</Button>
+                    <Button x:Name="btn16" Grid.Row="1" Grid.Column="5" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">H</Button>
+                    <Button x:Name="btn17" Grid.Row="1" Grid.Column="6" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">J</Button>
+                    <Button x:Name="btn18" Grid.Row="1" Grid.Column="7" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">K</Button>
+                    <Button x:Name="btn19" Grid.Row="1" Grid.Column="8" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">L</Button>
 
 
-                    <Button Grid.Row="2" Grid.Column="1" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">Z</Button>
-                    <Button Grid.Row="2" Grid.Column="2" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">X</Button>
-                    <Button Grid.Row="2" Grid.Column="3" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">C</Button>
-                    <Button Grid.Row="2" Grid.Column="4" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">V</Button>
-                    <Button Grid.Row="2" Grid.Column="5" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">B</Button>
-                    <Button Grid.Row="2" Grid.Column="6" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">N</Button>
-                    <Button Grid.Row="2" Grid.Column="7" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">M</Button>
+                    <Button x:Name="btn20" Grid.Row="2" Grid.Column="1" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">Z</Button>
+                    <Button x:Name="btn21" Grid.Row="2" Grid.Column="2" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">X</Button>
+                    <Button x:Name="btn22" Grid.Row="2" Grid.Column="3" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">C</Button>
+                    <Button x:Name="btn23" Grid.Row="2" Grid.Column="4" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">V</Button>
+                    <Button x:Name="btn24" Grid.Row="2" Grid.Column="5" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">B</Button>
+                    <Button x:Name="btn25" Grid.Row="2" Grid.Column="6" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">N</Button>
+                    <Button x:Name="btn26" Grid.Row="2" Grid.Column="7" Width="90" Height="50" Margin="6" Background="#FF531166" FontSize="20" Foreground="GhostWhite" BorderBrush="{x:Null}">M</Button>
                 </Grid>
             </Border>
         </StackPanel>

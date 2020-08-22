@@ -20,7 +20,6 @@ namespace Game_Platform.Games.Forca.Views
             thread.Start();
         }
 
-
         private void SwitchWindow()
         {
             Thread.Sleep(6000);

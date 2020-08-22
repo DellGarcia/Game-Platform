@@ -66,7 +66,7 @@ namespace Game_Platform.Games.Forca.Services.RestCountriesApi
         public List<object> Languages { get; set; }
 
         [JsonProperty("translations")]
-        public object Translations { get; set; }
+        public Translations Translations { get; set; }
 
         [JsonProperty("flag")]
         public string Flag { get; set; }

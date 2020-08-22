@@ -16,7 +16,7 @@ namespace Game_Platform.Games.Forca.Views
 
         private void StartGame(object sender, RoutedEventArgs e)
         {
-            AwaitView.Create().Show();
+            new MainView().Show();
             Close();
         }
     }
