@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 
 namespace Game_Platform.Games.Forca.Services.RestCountriesApi.AlphaCode
 {
-    public interface IAlphaCode
+    public interface IRestCountries
     {
         [Get("/rest/v2")]
-        Task<List<AlphaCodeResponse>> GetAsyncAlphaCode();
+        Task<List<RestCountriesResponse>> GetAsyncCountries();
     }
 }
