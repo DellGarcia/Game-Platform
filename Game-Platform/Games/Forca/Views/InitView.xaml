@@ -5,7 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Game_Platform.Games.Forca.Views"
         mc:Ignorable="d"
-        Title="MainView" Height="720" Width="1080" WindowStyle="None" WindowState="Maximized" WindowStartupLocation="CenterScreen" ResizeMode="CanResize" MinWidth="1080" MinHeight="720">
+        Title="MainView" 
+        Height="720" 
+        Width="1080" 
+        WindowStyle="None" 
+        WindowState="Maximized" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="CanResize" 
+        MinWidth="1080" 
+        MinHeight="720">
     <Window.Background>
         <RadialGradientBrush>
             <GradientStop Color="#FF051036" Offset="0.887"/>

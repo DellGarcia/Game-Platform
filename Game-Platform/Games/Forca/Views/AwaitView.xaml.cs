@@ -29,7 +29,7 @@ namespace Game_Platform.Games.Forca.Views
 
         public static AwaitView Create()
         {
-            if(INSTANCE == null)
+            if (INSTANCE == null)
             {
                 INSTANCE = new AwaitView();
             }
@@ -39,7 +39,7 @@ namespace Game_Platform.Games.Forca.Views
 
         public void Destroy()
         {
-            INSTANCE.Close();
+            INSTANCE.Hide();
             INSTANCE = null;
         }
     }

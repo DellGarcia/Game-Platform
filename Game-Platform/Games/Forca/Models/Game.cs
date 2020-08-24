@@ -21,8 +21,8 @@ namespace Game_Platform.Games.Forca.Models
             Word = ApiRequest.Countries[Index].Translations.Br.ToUpper();
             WordHidden = "";
             TriedCorrectLetters = new List<string>();
-            foreach(char Letter in Word)
-                WordHidden += Letter != ' '?"_ ":"- ";
+            foreach (char Letter in Word)
+                WordHidden += Letter != ' ' ? "_ " : "- ";
 
             MessageBox.Show(Word);
         }
@@ -32,14 +32,14 @@ namespace Game_Platform.Games.Forca.Models
             bool exists = false;
 
             StringBuilder sb = new StringBuilder();
-            for(int i = 0; i < Word.Length; i++)
+            for (int i = 0; i < Word.Length; i++)
             {
-                if(Word[i] == Letter[0])
+                if (Word[i] == Letter[0])
                 {
                     exists = true;
                     sb.Append($"{Letter} ");
-                    
-                } else
+                }
+                else
                 {
                     sb.Append(TriedCorrectLetters.Contains($"{Word[i]}") ? $"{Word[i]}" :
                     Word[i] == ' ' ? "- " : "_ ");
@@ -50,10 +50,10 @@ namespace Game_Platform.Games.Forca.Models
 
             if (!exists)
                 Attemps--;
-                if(Attemps == 0)
-                {
-                    MessageBox.Show("Fim de Jogo, Voce perdeu");
-                }
+            if (Attemps == 0)
+            {
+                MessageBox.Show("Fim de Jogo, Voce perdeu");
+            }
             else
                 TriedCorrectLetters.Add(Letter);
         }

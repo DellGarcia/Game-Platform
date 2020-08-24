@@ -10,7 +10,7 @@ namespace Game_Platform.Games.Forca.Controllers
         private readonly Button[] VirtualKeyBoard;
         private readonly Game Game;
 
-        private MainView Main;
+        private readonly MainView Main;
 
         public GameController(MainView main, Button[] virtualKeyboard)
         {
@@ -19,6 +19,7 @@ namespace Game_Platform.Games.Forca.Controllers
             Main = main;
             Main.Country.Text = Game.WordHidden;
             Main.Attemps.Text = $"{Game.Attemps}";
+
             foreach (Button btn in VirtualKeyBoard)
                 btn.Click += Attemp;
         }

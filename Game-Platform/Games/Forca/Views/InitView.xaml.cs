@@ -3,9 +3,6 @@ using System.Windows;
 
 namespace Game_Platform.Games.Forca.Views
 {
-    /// <summary>
-    /// Lógica interna para MainView.xaml
-    /// </summary>
     public partial class InitView : Window
     {
         public InitView()

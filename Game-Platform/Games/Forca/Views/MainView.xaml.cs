@@ -1,19 +1,12 @@
 ﻿using Game_Platform.Games.Forca.Controllers;
-using Game_Platform.Games.Forca.Services.RestCountriesApi.AlphaCode;
-using SharpVectors.Runtime;
-using System;
-using System.Net;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media.Imaging;
 
 namespace Game_Platform.Games.Forca.Views
 {
-    /// <summary>
-    /// Lógica interna para MainView.xaml
-    /// </summary>
     public partial class MainView : Window
     {
+
         public MainView()
         {
             InitializeComponent();
@@ -53,7 +46,7 @@ namespace Game_Platform.Games.Forca.Views
             VirtualKeyboard[24] = btn25;
             VirtualKeyboard[25] = btn26;
 
-            new GameController(this ,VirtualKeyboard);
+            new GameController(this, VirtualKeyboard);
         }
 
     }
