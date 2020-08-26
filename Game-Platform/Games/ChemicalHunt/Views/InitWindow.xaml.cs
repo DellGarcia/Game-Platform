@@ -14,14 +14,20 @@ using System.Windows.Shapes;
 
 namespace Game_Platform.Games.ChemicalHunt.Views
 {
-    /// <summary>
-    /// Lógica interna para InitWindow.xaml
-    /// </summary>
     public partial class InitWindow : Window
     {
+        Window Main;
+
         public InitWindow()
         {
             InitializeComponent();
+            Main = new MainWindow();
+        }
+
+        private void StartGame(object sender, RoutedEventArgs e)
+        {
+            Main.Show();
+            Close();
         }
     }
 }

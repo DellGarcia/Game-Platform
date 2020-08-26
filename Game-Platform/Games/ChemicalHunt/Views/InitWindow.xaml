@@ -60,7 +60,7 @@
         <Image Grid.Row="0" Grid.Column="0" Width="80" Source="/Games/ChemicalHunt/Assets/069-science.png" HorizontalAlignment="Right"/>
 
         <StackPanel Grid.Row="2" Grid.Column="2" VerticalAlignment="Center">
-            <Button Content="Start Game" Width="180" Height="55" Margin="0 20" Background="#FFFCBD5E" BorderThickness="0" FontSize="27" Foreground="#FF514F4F"/>
+            <Button Content="Start Game" Width="180" Height="55" Margin="0 20" Background="#FFFCBD5E" BorderThickness="0" FontSize="27" Foreground="#FF514F4F" Click="StartGame"/>
             <Button Content="Info" Width="180" Height="55" Background="#FFFCBD5E" BorderThickness="0" FontSize="27" Foreground="#FF514F4F"/>
         </StackPanel>
 

@@ -61,6 +61,9 @@
     <Compile Include="Games\ChemicalHunt\Views\InitWindow.xaml.cs">
       <DependentUpon>InitWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Games\ChemicalHunt\Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Games\CosmosMemory\Controller\CardController.cs" />
     <Compile Include="Games\CosmosMemory\Controller\CompareController.cs" />
     <Compile Include="Games\CosmosMemory\Models\Card.cs" />
@@ -107,6 +110,10 @@
       <DependentUpon>RegisterView.xaml</DependentUpon>
     </Compile>
     <Page Include="Games\ChemicalHunt\Views\InitWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Games\ChemicalHunt\Views\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
