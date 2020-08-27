@@ -13,8 +13,9 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         WindowState="Maximized"
+        Background="#FF064766"
         >
-    <Grid Background="#FF065966">
+    <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
@@ -32,7 +33,7 @@
                 Name="MyRectangle"
                 Width="120" 
                 Source="/Games/ChemicalHunt/Assets/088-molecular.png"
-                Grid.Row="0" Grid.Column="2">
+                Grid.Row="1" Grid.Column="2">
             <Image.Triggers>
                 <EventTrigger RoutedEvent="Rectangle.Loaded">
                     <BeginStoryboard>
@@ -47,7 +48,7 @@
                 </EventTrigger>
             </Image.Triggers>
         </Image>
-        <TextBlock Height="90" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Text="Chemical Hunt" TextAlignment="Center" FontSize="70" TextWrapping="Wrap" Foreground="White"/>
+        <TextBlock Height="90" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Text="Chemical Hunt" TextAlignment="Center" FontSize="70" TextWrapping="Wrap" Foreground="White"/>
 
         <Image Grid.Row="2" Width="80" Source="/Games/ChemicalHunt/Assets/073-poison.png" />
 

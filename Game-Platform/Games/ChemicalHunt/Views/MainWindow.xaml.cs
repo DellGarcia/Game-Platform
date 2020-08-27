@@ -28,14 +28,14 @@ namespace Game_Platform.Games.ChemicalHunt.Views
         private void CreateContainer()
         {
             Letters = new Button[20, 20];
-
+            Random random = new Random();
             for (int i = 0; i < 20; i++)
             {
                 for (int j = 0; j < 20; j++)
                 {
                     Letters[i, j] = new Button
                     {
-                        Content = "L",
+                        Content = Convert.ToChar(random.Next(26) + 65),
                         Background = Brushes.GhostWhite,
                         Foreground = Brushes.Black,
                         BorderBrush = null,
@@ -52,7 +52,7 @@ namespace Game_Platform.Games.ChemicalHunt.Views
         private void Select(object obj, RoutedEventArgs args)
         {
             Button btn = (Button)obj;
-            btn.Background = Brushes.DarkGreen;
+            btn.Background = Brushes.Yellow;
         }
     }
 }

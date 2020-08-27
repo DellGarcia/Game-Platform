@@ -10,7 +10,7 @@
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
         WindowStyle="None"
-        Background="#FF065966">
+        Background="#FF064766">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -22,18 +22,24 @@
         </Grid.RowDefinitions>
 
         <StackPanel VerticalAlignment="Center">
-            <TextBlock FontSize="22" TextAlignment="Center" Margin="20">Elementos a encontrar</TextBlock>
+            <TextBlock FontSize="30" TextAlignment="Center" Margin="20" Foreground="GhostWhite">Elementos a encontrar</TextBlock>
             <Border Background="{x:Null}" 
-                BorderBrush="Black" 
-                BorderThickness="1" 
+                BorderBrush="DarkGray" 
+                BorderThickness="2" 
                 CornerRadius="10" 
                 Padding="25"
                 Height="500"
                 Margin="50 0">
+                <StackPanel Margin="25">
+                    <CheckBox FontSize="20" Background="#FF0E7417" Margin="0 5">Hidrogênio</CheckBox>
+                    <CheckBox FontSize="20" Background="#FF0E7417" Margin="0 5">Hélio</CheckBox>
+                    <CheckBox FontSize="20" Background="#FF0E7417" Margin="0 5">Ouro</CheckBox>
+                    <CheckBox FontSize="20" Background="#FF0E7417" Margin="0 5">Oxigênio</CheckBox>
+                </StackPanel>
             </Border>
         </StackPanel>
 
-        <Grid x:Name="HuntingWordsContainer" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"> 
+        <Grid x:Name="HuntingWordsContainer" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
