@@ -1,32 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace Game_Platform.Games.ChemicalHunt.Views
 {
     public partial class InitWindow : Window
     {
-        Window Main;
-
         public InitWindow()
         {
             InitializeComponent();
-            Main = new MainWindow();
         }
 
         private void StartGame(object sender, RoutedEventArgs e)
         {
-            Main.Show();
+            new MainWindow().Show();
             Close();
         }
     }

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Game_Platform.Games.Forca.Services.RestCountriesApi.AlphaCode
+namespace Game_Platform.Games.GlobalHangman.Services.RestCountriesApi.AlphaCode
 {
     public static class ApiRequest
     {

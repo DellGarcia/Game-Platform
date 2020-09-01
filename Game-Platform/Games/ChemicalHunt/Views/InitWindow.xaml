@@ -33,7 +33,15 @@
                 Name="MyRectangle"
                 Width="120" 
                 Source="/Games/ChemicalHunt/Assets/088-molecular.png"
-                Grid.Row="1" Grid.Column="2">
+                Grid.Row="1" Grid.Column="2" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform x:Name="Circulo" Angle="15"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
             <Image.Triggers>
                 <EventTrigger RoutedEvent="Rectangle.Loaded">
                     <BeginStoryboard>
@@ -42,6 +50,12 @@
                                     Storyboard.TargetName="MyRectangle" 
                                     Storyboard.TargetProperty="Width"
                                     From="120" To="170" Duration="0:0:2" 
+                                    AutoReverse="True" RepeatBehavior="Forever" />
+
+                            <DoubleAnimation
+                                    Storyboard.TargetName="Circulo" 
+                                    Storyboard.TargetProperty="Angle"
+                                    From="0" To="360" Duration="0:0:5" 
                                     AutoReverse="True" RepeatBehavior="Forever" />
                         </Storyboard>
                     </BeginStoryboard>

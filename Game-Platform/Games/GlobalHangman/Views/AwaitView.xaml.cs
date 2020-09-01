@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using System.Windows;
 
-namespace Game_Platform.Games.Forca.Views
+namespace Game_Platform.Games.GlobalHangman.Views
 {
     public partial class AwaitView : Window
     {

@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Game_Platform.Games.Forca.Controllers
+namespace Game_Platform.Games.GlobalHangman.Controllers
 {
-    class KeyBoardController
+    public class AttemptController
     {
+
+
+
     }
 }

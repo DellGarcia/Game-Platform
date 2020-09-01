@@ -58,6 +58,11 @@
     </ApplicationDefinition>
     <Compile Include="DAO\PlayerDAO.cs" />
     <Compile Include="Database\ConnectionFactory.cs" />
+    <Compile Include="Games\ChemicalHunt\ChemicalElementsApi\ChemicalElement.cs" />
+    <Compile Include="Games\ChemicalHunt\ChemicalElementsApi\ChemicalElements.cs" />
+    <Compile Include="Games\ChemicalHunt\Models\Game.cs" />
+    <Compile Include="Games\ChemicalHunt\Models\HiddenWord.cs" />
+    <Compile Include="Games\ChemicalHunt\Models\HuntButton.cs" />
     <Compile Include="Games\ChemicalHunt\Views\InitWindow.xaml.cs">
       <DependentUpon>InitWindow.xaml</DependentUpon>
     </Compile>
@@ -69,12 +74,12 @@
     <Compile Include="Games\CosmosMemory\Models\Card.cs" />
     <Compile Include="Games\CosmosMemory\Models\Difficulties.cs" />
     <Compile Include="Games\CosmosMemory\Utils\Constellations.cs" />
-    <Compile Include="Games\Forca\Controllers\AttemptController.cs" />
-    <Compile Include="Games\Forca\Controllers\GameController.cs" />
-    <Compile Include="Games\Forca\Controllers\KeyBoardController.cs" />
-    <Compile Include="Games\Forca\Models\Game.cs" />
-    <Compile Include="Games\Forca\Services\RestCountriesApi\Translations.cs" />
-    <Compile Include="Games\Forca\Views\AwaitView.xaml.cs">
+    <Compile Include="Games\GlobalHangman\Controllers\AttemptController.cs" />
+    <Compile Include="Games\GlobalHangman\Controllers\GameController.cs" />
+    <Compile Include="Games\GlobalHangman\Controllers\KeyBoardController.cs" />
+    <Compile Include="Games\GlobalHangman\Models\Game.cs" />
+    <Compile Include="Games\GlobalHangman\Services\RestCountriesApi\Translations.cs" />
+    <Compile Include="Games\GlobalHangman\Views\AwaitView.xaml.cs">
       <DependentUpon>AwaitView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utils\Methods.cs" />
@@ -93,13 +98,13 @@
     <Compile Include="Games\CosmosMemory\Views\HardGameView.xaml.cs">
       <DependentUpon>HardGameView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Games\Forca\Services\RestCountriesApi\RestCountriesResponse.cs" />
-    <Compile Include="Games\Forca\Services\RestCountriesApi\ApiRequest.cs" />
-    <Compile Include="Games\Forca\Services\RestCountriesApi\IRestCountries.cs" />
-    <Compile Include="Games\Forca\Views\InitView.xaml.cs">
+    <Compile Include="Games\GlobalHangman\Services\RestCountriesApi\RestCountriesResponse.cs" />
+    <Compile Include="Games\GlobalHangman\Services\RestCountriesApi\ApiRequest.cs" />
+    <Compile Include="Games\GlobalHangman\Services\RestCountriesApi\IRestCountries.cs" />
+    <Compile Include="Games\GlobalHangman\Views\InitView.xaml.cs">
       <DependentUpon>InitView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Games\Forca\Views\MainView.xaml.cs">
+    <Compile Include="Games\GlobalHangman\Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utils\MD5HashString.cs" />
@@ -137,15 +142,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Games\Forca\Views\AwaitView.xaml">
+    <Page Include="Games\GlobalHangman\Views\AwaitView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Games\Forca\Views\InitView.xaml">
+    <Page Include="Games\GlobalHangman\Views\InitView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Games\Forca\Views\MainView.xaml">
+    <Page Include="Games\GlobalHangman\Views\MainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -359,41 +364,41 @@
     <Resource Include="Games\ChemicalHunt\Assets\118-lab.png" />
     <Resource Include="Games\ChemicalHunt\Assets\119-flask.png" />
     <Resource Include="Games\ChemicalHunt\Assets\120-books.png" />
-    <Resource Include="Games\Forca\Assets\airplane.png" />
-    <Resource Include="Games\Forca\Assets\plane.png" />
-    <Resource Include="Games\Forca\Assets\cartography.png" />
-    <Resource Include="Games\Forca\Assets\005-navigation.png" />
-    <Resource Include="Games\Forca\Assets\013-backpack.png" />
-    <Resource Include="Games\Forca\Assets\015-plane.png" />
-    <Resource Include="Games\Forca\Assets\023-geography.png" />
-    <Resource Include="Games\Forca\Assets\024-satellite.png" />
-    <Resource Include="Games\Forca\Assets\047-road-sign.png" />
-    <Resource Include="Games\Forca\Assets\001-africa.png" />
-    <Resource Include="Games\Forca\Assets\002-anchor.png" />
-    <Resource Include="Games\Forca\Assets\003-arrows.png" />
-    <Resource Include="Games\Forca\Assets\004-asia.png" />
-    <Resource Include="Games\Forca\Assets\005-binoculars.png" />
-    <Resource Include="Games\Forca\Assets\006-earth.png" />
-    <Resource Include="Games\Forca\Assets\007-earth.png" />
-    <Resource Include="Games\Forca\Assets\008-flag.png" />
-    <Resource Include="Games\Forca\Assets\009-geography.png" />
-    <Resource Include="Games\Forca\Assets\010-gps.png" />
-    <Resource Include="Games\Forca\Assets\011-landscape.png" />
-    <Resource Include="Games\Forca\Assets\012-location.png" />
-    <Resource Include="Games\Forca\Assets\013-map.png" />
-    <Resource Include="Games\Forca\Assets\014-mountain.png" />
-    <Resource Include="Games\Forca\Assets\015-navigation.png" />
-    <Resource Include="Games\Forca\Assets\016-north america.png" />
-    <Resource Include="Games\Forca\Assets\017-protractor.png" />
-    <Resource Include="Games\Forca\Assets\018-satellite.png" />
-    <Resource Include="Games\Forca\Assets\019-search.png" />
-    <Resource Include="Games\Forca\Assets\020-signpost.png" />
-    <Resource Include="Games\Forca\Assets\021-south america.png" />
-    <Resource Include="Games\Forca\Assets\022-telescope.png" />
-    <Resource Include="Games\Forca\Assets\023-tool.png" />
-    <Resource Include="Games\Forca\Assets\024-tree.png" />
-    <Resource Include="Games\Forca\Assets\025-volcano.png" />
-    <Resource Include="Games\Forca\Assets\026-world.png" />
+    <Resource Include="Games\GlobalHangman\Assets\airplane.png" />
+    <Resource Include="Games\GlobalHangman\Assets\plane.png" />
+    <Resource Include="Games\GlobalHangman\Assets\cartography.png" />
+    <Resource Include="Games\GlobalHangman\Assets\005-navigation.png" />
+    <Resource Include="Games\GlobalHangman\Assets\013-backpack.png" />
+    <Resource Include="Games\GlobalHangman\Assets\015-plane.png" />
+    <Resource Include="Games\GlobalHangman\Assets\023-geography.png" />
+    <Resource Include="Games\GlobalHangman\Assets\024-satellite.png" />
+    <Resource Include="Games\GlobalHangman\Assets\047-road-sign.png" />
+    <Resource Include="Games\GlobalHangman\Assets\001-africa.png" />
+    <Resource Include="Games\GlobalHangman\Assets\002-anchor.png" />
+    <Resource Include="Games\GlobalHangman\Assets\003-arrows.png" />
+    <Resource Include="Games\GlobalHangman\Assets\004-asia.png" />
+    <Resource Include="Games\GlobalHangman\Assets\005-binoculars.png" />
+    <Resource Include="Games\GlobalHangman\Assets\006-earth.png" />
+    <Resource Include="Games\GlobalHangman\Assets\007-earth.png" />
+    <Resource Include="Games\GlobalHangman\Assets\008-flag.png" />
+    <Resource Include="Games\GlobalHangman\Assets\009-geography.png" />
+    <Resource Include="Games\GlobalHangman\Assets\010-gps.png" />
+    <Resource Include="Games\GlobalHangman\Assets\011-landscape.png" />
+    <Resource Include="Games\GlobalHangman\Assets\012-location.png" />
+    <Resource Include="Games\GlobalHangman\Assets\013-map.png" />
+    <Resource Include="Games\GlobalHangman\Assets\014-mountain.png" />
+    <Resource Include="Games\GlobalHangman\Assets\015-navigation.png" />
+    <Resource Include="Games\GlobalHangman\Assets\016-north america.png" />
+    <Resource Include="Games\GlobalHangman\Assets\017-protractor.png" />
+    <Resource Include="Games\GlobalHangman\Assets\018-satellite.png" />
+    <Resource Include="Games\GlobalHangman\Assets\019-search.png" />
+    <Resource Include="Games\GlobalHangman\Assets\020-signpost.png" />
+    <Resource Include="Games\GlobalHangman\Assets\021-south america.png" />
+    <Resource Include="Games\GlobalHangman\Assets\022-telescope.png" />
+    <Resource Include="Games\GlobalHangman\Assets\023-tool.png" />
+    <Resource Include="Games\GlobalHangman\Assets\024-tree.png" />
+    <Resource Include="Games\GlobalHangman\Assets\025-volcano.png" />
+    <Resource Include="Games\GlobalHangman\Assets\026-world.png" />
     <Resource Include="Assets\CosmosMemory.png" />
     <Resource Include="Assets\Screens\EasyGame.png" />
     <Resource Include="Assets\Screens\HardGame.png" />

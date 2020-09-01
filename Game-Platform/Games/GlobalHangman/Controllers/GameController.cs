@@ -1,9 +1,9 @@
-﻿using Game_Platform.Games.Forca.Models;
-using Game_Platform.Games.Forca.Services.RestCountriesApi.AlphaCode;
-using Game_Platform.Games.Forca.Views;
+﻿using Game_Platform.Games.GlobalHangman.Models;
+using Game_Platform.Games.GlobalHangman.Services.RestCountriesApi.AlphaCode;
+using Game_Platform.Games.GlobalHangman.Views;
 using System.Windows.Controls;
 
-namespace Game_Platform.Games.Forca.Controllers
+namespace Game_Platform.Games.GlobalHangman.Controllers
 {
     public class GameController
     {

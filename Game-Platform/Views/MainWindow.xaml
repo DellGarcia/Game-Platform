@@ -16,6 +16,10 @@
         WindowStyle="None" 
         Icon="/Assets/mini-falco.png">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="28*"/>
+        </Grid.RowDefinitions>
         <Grid Height="100" VerticalAlignment="Top" Background="White">
             <Image Source="/Assets/falco.jpg" HorizontalAlignment="Left" Margin="10 0" Width="120" Stretch="UniformToFill"/>
             <TextBlock Text="Hunting for games" Margin="10" FontSize="18" Foreground="#FF2A6088" HorizontalAlignment="Center"/>
@@ -35,7 +39,7 @@
             </StackPanel>
             <Image Source="/Assets/turn-off-dark.png"  Width="30" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Top" MouseLeftButtonDown="HandleExit"/>
         </Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="60 20" >
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,20,60,0" >
             <StackPanel HorizontalAlignment="Right">
                 <Ellipse Height="65" Width="68" StrokeThickness="4">
                     <Ellipse.Stroke>
@@ -50,18 +54,18 @@
                 </Ellipse>
             </StackPanel>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10 110">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,110,10,0">
             <TextBox Width="150" materialDesign:HintAssist.Hint="SEARCH" Foreground="White"/>
             <materialDesign:PackIcon Kind="AccountSearch" Foreground="White" VerticalAlignment="Center"/>
         </StackPanel>
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="290,94" Grid.RowSpan="2">
             <TextBlock Text="Avaliable Games" FontSize="25" Foreground="White" TextAlignment="Center" Width="500" Margin="0 200 0 0"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <materialDesign:Card Width="200" Height="120" Margin="15" BorderThickness="0">
-                <Image Source="/Assets/CosmosMemory.png" Stretch="Fill" MouseLeftButtonUp="PlayCosmosMemory"/>
-            </materialDesign:Card>
-            <materialDesign:Card Width="200" Height="120" Margin="15"/>
+                <materialDesign:Card Width="200" Height="120" Margin="15" BorderThickness="0">
+                    <Image Source="/Assets/CosmosMemory.png" Stretch="Fill" MouseLeftButtonUp="PlayCosmosMemory"/>
+                </materialDesign:Card>
+                <materialDesign:Card Width="200" Height="120" Margin="15"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <materialDesign:Card Width="200" Height="120" Margin="15"/>

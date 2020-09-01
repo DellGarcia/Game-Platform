@@ -1,7 +1,7 @@
-﻿using Game_Platform.Games.Forca.Services.RestCountriesApi.AlphaCode;
+﻿using Game_Platform.Games.GlobalHangman.Services.RestCountriesApi.AlphaCode;
 using System.Windows;
 
-namespace Game_Platform.Games.Forca.Views
+namespace Game_Platform.Games.GlobalHangman.Views
 {
     public partial class InitView : Window
     {

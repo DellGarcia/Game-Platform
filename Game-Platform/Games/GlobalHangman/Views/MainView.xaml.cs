@@ -1,8 +1,8 @@
-﻿using Game_Platform.Games.Forca.Controllers;
+﻿using Game_Platform.Games.GlobalHangman.Controllers;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Game_Platform.Games.Forca.Views
+namespace Game_Platform.Games.GlobalHangman.Views
 {
     public partial class MainView : Window
     {

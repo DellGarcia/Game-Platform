@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Game_Platform.Games.Forca.Services.RestCountriesApi.AlphaCode
+namespace Game_Platform.Games.GlobalHangman.Services.RestCountriesApi.AlphaCode
 {
     public interface IRestCountries
     {

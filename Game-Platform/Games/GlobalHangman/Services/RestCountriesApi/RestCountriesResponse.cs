@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace Game_Platform.Games.Forca.Services.RestCountriesApi
+namespace Game_Platform.Games.GlobalHangman.Services.RestCountriesApi
 {
     public class RestCountriesResponse
     {

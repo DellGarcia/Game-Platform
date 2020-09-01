@@ -1,9 +1,9 @@
-﻿<Window x:Class="Game_Platform.Games.Forca.Views.InitView"
+﻿<Window x:Class="Game_Platform.Games.GlobalHangman.Views.InitView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Game_Platform.Games.Forca.Views"
+        xmlns:local="clr-namespace:Game_Platform.Games.GlobalHangman.Views"
         mc:Ignorable="d"
         Title="MainView" 
         Height="720" 
@@ -38,23 +38,23 @@
         </Grid.RowDefinitions>
 
         <StackPanel HorizontalAlignment="Left">
-            <Image Source="/Games/Forca/Assets/005-navigation.png" Width="60" Margin="15"/>
+            <Image Source="/Games/GlobalHangman/Assets/005-navigation.png" Width="60" Margin="15"/>
         </StackPanel>
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="2">
-            <Image Source="/Games/Forca/Assets/008-flag.png" Width="120"/>
+            <Image Source="/Games/GlobalHangman/Assets/008-flag.png" Width="120"/>
         </StackPanel>
 
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1">
-            <Image Source="/Games/Forca/Assets/airplane.png" Width="60"/>
+            <Image Source="/Games/GlobalHangman/Assets/airplane.png" Width="60"/>
         </StackPanel>
 
         <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="1" Grid.Column="3" Margin="40">
-            <Image Source="/Games/Forca/Assets/013-map.png" Width="80"/>
+            <Image Source="/Games/GlobalHangman/Assets/013-map.png" Width="80"/>
         </StackPanel>
 
         <StackPanel HorizontalAlignment="Right" Grid.Row="0" Grid.Column="4">
-            <Image Source="/Games/Forca/Assets/024-satellite.png" Width="60" Margin="50"/>
+            <Image Source="/Games/GlobalHangman/Assets/024-satellite.png" Width="60" Margin="50"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Center">
@@ -62,7 +62,7 @@
         </StackPanel>
 
         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="0"  Margin="60">
-            <Image Source="/Games/Forca/Assets/cartography.png" Width="80"/>
+            <Image Source="/Games/GlobalHangman/Assets/cartography.png" Width="80"/>
         </StackPanel>
         
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2">
@@ -71,11 +71,11 @@
         </StackPanel>
 
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="3"  Margin="50">
-            <Image Source="/Games/Forca/Assets/plane.png" Width="60"/>
+            <Image Source="/Games/GlobalHangman/Assets/plane.png" Width="60"/>
         </StackPanel>
 
         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="4"  Margin="40">
-            <Image Source="/Games/Forca/Assets/013-backpack.png" Width="60"/>
+            <Image Source="/Games/GlobalHangman/Assets/013-backpack.png" Width="60"/>
         </StackPanel>
 
     </Grid>

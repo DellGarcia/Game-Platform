@@ -1,9 +1,9 @@
-﻿using Game_Platform.Games.Forca.Services.RestCountriesApi.AlphaCode;
+﻿using Game_Platform.Games.GlobalHangman.Services.RestCountriesApi.AlphaCode;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
 
-namespace Game_Platform.Games.Forca.Models
+namespace Game_Platform.Games.GlobalHangman.Models
 {
     public class Game
     {
@@ -41,7 +41,7 @@ namespace Game_Platform.Games.Forca.Models
                 }
                 else
                 {
-                    sb.Append(TriedCorrectLetters.Contains($"{Word[i]}") ? $"{Word[i]}" :
+                    sb.Append(TriedCorrectLetters.Contains($"{Word[i]}") ? $"{Word[i]} " :
                     Word[i] == ' ' ? "- " : "_ ");
                 }
             }
