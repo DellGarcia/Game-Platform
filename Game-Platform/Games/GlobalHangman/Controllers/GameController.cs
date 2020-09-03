@@ -8,20 +8,26 @@ namespace Game_Platform.Games.GlobalHangman.Controllers
     public class GameController
     {
         private readonly Button[] VirtualKeyBoard;
-        private readonly Game Game;
+        private static Game Game;
 
-        private readonly MainView Main;
+        private static MainView Main;
 
         public GameController(MainView main, Button[] virtualKeyboard)
         {
             VirtualKeyBoard = virtualKeyboard;
-            Game = new Game();
             Main = main;
-            Main.Country.Text = Game.WordHidden;
-            Main.Attemps.Text = $"{Game.Attemps}";
+
+            Reset();
 
             foreach (Button btn in VirtualKeyBoard)
                 btn.Click += Attemp;
+        }
+
+        public static void Reset()
+        {
+            Game = new Game();
+            Main.Country.Text = Game.WordHidden;
+            Main.Attemps.Text = $"{Game.Attemps}";
         }
 
         private void Attemp(object sender, System.Windows.RoutedEventArgs e)

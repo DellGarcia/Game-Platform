@@ -7,8 +7,8 @@ namespace Game_Platform.Games.GlobalHangman.Services.RestCountriesApi.AlphaCode
 {
     public static class ApiRequest
     {
-        
-        public static List<RestCountriesResponse> Countries { get; private set; }
+        public static int Index { get; private set; }
+        private static List<RestCountriesResponse> Countries;
 
         public static async void LoadCountries()
         {
@@ -23,6 +23,11 @@ namespace Game_Platform.Games.GlobalHangman.Services.RestCountriesApi.AlphaCode
             {
                 throw new Exception($"Erro ao consumir a API: \n${e.Message}");
             }
+        }
+
+        public static RestCountriesResponse NextCountry()
+        {
+            return Countries[Index++];
         }
 
         public static void Shuffle()

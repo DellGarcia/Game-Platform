@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel>
-            <TextBlock>Tentativas: <TextBlock x:Name="Attemps" /></TextBlock>
+            <TextBlock FontSize="25" Margin="20">Tentativas: <TextBlock x:Name="Attemps"/></TextBlock>
         </StackPanel>
         <StackPanel VerticalAlignment="Center">
             <TextBlock TextAlignment="Center" Text="_ _ _ _ _ _" x:Name="Country" FontSize="60" Typography.Capitals="AllSmallCaps" TextDecorations="{x:Null}"/>

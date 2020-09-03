@@ -1,4 +1,6 @@
-﻿using Game_Platform.Games.GlobalHangman.Services.RestCountriesApi.AlphaCode;
+﻿using Game_Platform.Games.CosmosMemory.Utils;
+using Game_Platform.Games.GlobalHangman.Services.RestCountriesApi;
+using Game_Platform.Games.GlobalHangman.Services.RestCountriesApi.AlphaCode;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -7,7 +9,7 @@ namespace Game_Platform.Games.GlobalHangman.Models
 {
     public class Game
     {
-        private int Index { get; set; }
+        private RestCountriesResponse Country;
         public int Attemps { get; private set; }
         private List<string> TriedCorrectLetters { get; set; }
 
@@ -17,8 +19,8 @@ namespace Game_Platform.Games.GlobalHangman.Models
         public Game()
         {
             Attemps = 6;
-            Index = 0;
-            Word = ApiRequest.Countries[Index].Translations.Br.ToUpper();
+            Country = ApiRequest.NextCountry();
+            Word = Methods.RemoveAccents(Country.Translations.Br.ToUpper());;
             WordHidden = "";
             TriedCorrectLetters = new List<string>();
             foreach (char Letter in Word)
@@ -57,5 +59,7 @@ namespace Game_Platform.Games.GlobalHangman.Models
             else
                 TriedCorrectLetters.Add(Letter);
         }
+
+        
     }
 }
