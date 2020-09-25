@@ -10,15 +10,34 @@ namespace Game_Platform.Games.ChemicalHunt.Views
 {
     public partial class MainWindow : Window
     {
-        private Button[,] Letters;
+        public static TextBlock[] texts = new TextBlock[10];
 
-        public MainWindow()
+        public static Button[,] Letters;
+
+        private static MainWindow INSTANCE;
+
+        private MainWindow()
         {
             InitializeComponent();
             CreateContainer();
             Game game = new Game();
             InsertHiddenWords();
             InsertElementsToList();
+        }
+
+        public static Window create()
+        {
+            if (INSTANCE == null)
+            {
+                INSTANCE = new MainWindow();
+            }
+            return INSTANCE;
+        }
+
+        public static void destroy()
+        {
+            INSTANCE.Close();
+            INSTANCE = null;
         }
 
         private void CreateContainer()
@@ -50,7 +69,7 @@ namespace Game_Platform.Games.ChemicalHunt.Views
         {
             var list = Game.Words;
 
-            foreach(HiddenWord Word in list)
+            foreach (HiddenWord Word in list)
             {
                 char[] array = Word.Name.ToCharArray();
                 Array.Reverse(array);
@@ -58,20 +77,19 @@ namespace Game_Platform.Games.ChemicalHunt.Views
                 if (Word.Orientation == Orientation.HORIZONTAL)
                 {
                     int index = 0;
-                    for(int i = Word.X; i < Word.X + Word.Name.Length; i++)
+                    for (int i = Word.X; i < Word.X + Word.Name.Length; i++)
                     {
                         Letters[i, Word.Y].Content = $"{Copy[index++]}".ToUpper();
-                        Letters[i, Word.Y].Foreground = Brushes.Red;
-                        Letters[i, Word.Y].Background = Brushes.Gold;
+                        //Letters[i, Word.Y].Foreground = Brushes.Red;    //Deixando palavras com a letra vermelha...para teste
                     }
-                } else
+                }
+                else
                 {
                     int index = 0;
                     for (int j = Word.Y; j < Word.Y + Word.Name.Length; j++)
                     {
                         Letters[Word.X, j].Content = $"{Copy[index++]}".ToUpper();
-                        Letters[Word.X, j].Foreground = Brushes.Red;
-                        Letters[Word.X, j].Background = Brushes.Gold;
+                        //Letters[Word.X, j].Foreground = Brushes.Red;    //Deixando palavras com a letra vermelha...para teste
                     }
                 }
             }
@@ -82,19 +100,30 @@ namespace Game_Platform.Games.ChemicalHunt.Views
             ChemicalElement[] ch = Game.Words.ToArray();
             for (int i = 0; i < 10; i++)
             {
-                CheckBox cb = new CheckBox()
+                texts[i] = new TextBlock()
                 {
-                    Content = ch[i].Name.ToUpper(),
-                    IsChecked = false,
-                    Background = Brushes.GhostWhite,
+                    Text = ch[i].Name.ToUpper(),
                     Foreground = Brushes.GhostWhite,
                     FontSize = 20,
-                    Margin = new Thickness(3)
+                    Margin = new Thickness(3),
                 };
-                ElementsList.Children.Add(cb);
+                texts[i].MouseLeftButtonUp += new System.Windows.Input.MouseButtonEventHandler(ShowChemicalInfo);
+                ElementsList.Children.Add(texts[i]);
             }
         }
 
+        private void ShowChemicalInfo(object obj, RoutedEventArgs args)
+        {
+            ChemicalElement[] ch = Game.Words.ToArray();
+            TextBlock tb = (TextBlock)obj;
+            foreach (ChemicalElement el in ch)
+            {
+                if (el.Name.ToUpper() == tb.Text)
+                {
+                    new ChemicalView(el).ShowDialog();
+                }
+            }
+        }
 
     }
 }

@@ -18,6 +18,7 @@ namespace Game_Platform.Games.ChemicalHunt.Models
             Symbol = Element.Symbol;
             AtomicNumber = Element.AtomicNumber;
             Weight = Element.Weight;
+            IconPath = Element.IconPath;
             Reversed = false;
             Located = false;
         }

@@ -67,7 +67,7 @@
         
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2">
             <Button Content="Start Game" Width="200" Height="50" Background="{x:Null}" BorderThickness="0" FontSize="30" Foreground="#FFD1C658" Click="StartGame"/>
-            <Button Content="Info" Width="200" Height="50" Background="{x:Null}" BorderThickness="0" FontSize="30" Foreground="#FFD1C658"/>
+            <Button Content="Info" Width="200" Height="50" Background="{x:Null}" BorderThickness="0" FontSize="30" Foreground="#FFD1C658" Click="ShowGameInfo"/>
         </StackPanel>
 
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="3"  Margin="50">

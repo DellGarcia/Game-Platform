@@ -11,6 +11,7 @@ namespace Game_Platform.Games.ChemicalHunt.Models
 
         public HuntButton()
         {
+            IsEnabled = true;
             Selected = false;
             Click += Select;
             Width = 40;
@@ -21,11 +22,14 @@ namespace Game_Platform.Games.ChemicalHunt.Models
         {
             HuntButton btn = (HuntButton)obj;
 
-            Selected = !Selected;
+            if (btn.Background == Brushes.GhostWhite)
+            {
+                Selected = true;
 
-            btn.Background = Selected ? Brushes.Gold : Brushes.GhostWhite;
+                btn.Background = Selected ? Brushes.DarkGreen : Brushes.GhostWhite;
 
-            Game.AddCoordinate(Point);
+                Game.AddCoordinate(Point);
+            }            
         }
     }
 }

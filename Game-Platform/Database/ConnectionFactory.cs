@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace Game_Platform.Database
@@ -18,7 +14,7 @@ namespace Game_Platform.Database
             try
             {
                 Connection = new SqlConnection("Integrated Security=SSPI;Persist Security Info=" +
-                    "False;Initial Catalog=bdGamePlatform;Data Source=DELLGARCIA-PC\\SQLEXPRESS");
+                    "False;Initial Catalog=bdGamePlatform;Data Source=DELLGARCIA-PC");
             }
             catch (Exception)
             {

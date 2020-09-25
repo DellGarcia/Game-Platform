@@ -63,6 +63,9 @@
     <Compile Include="Games\ChemicalHunt\Models\Game.cs" />
     <Compile Include="Games\ChemicalHunt\Models\HiddenWord.cs" />
     <Compile Include="Games\ChemicalHunt\Models\HuntButton.cs" />
+    <Compile Include="Games\ChemicalHunt\Views\ChemicalView.xaml.cs">
+      <DependentUpon>ChemicalView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Games\ChemicalHunt\Views\InitWindow.xaml.cs">
       <DependentUpon>InitWindow.xaml</DependentUpon>
     </Compile>
@@ -78,9 +81,17 @@
     <Compile Include="Games\GlobalHangman\Controllers\GameController.cs" />
     <Compile Include="Games\GlobalHangman\Controllers\KeyBoardController.cs" />
     <Compile Include="Games\GlobalHangman\Models\Game.cs" />
+    <Compile Include="Games\GlobalHangman\Services\RestCountriesApi\Currency.cs" />
+    <Compile Include="Games\GlobalHangman\Services\RestCountriesApi\Language.cs" />
     <Compile Include="Games\GlobalHangman\Services\RestCountriesApi\Translations.cs" />
+    <Compile Include="Games\GlobalHangman\Views\AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Games\GlobalHangman\Views\AwaitView.xaml.cs">
       <DependentUpon>AwaitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Games\GlobalHangman\Views\CountryInfoWindow.xaml.cs">
+      <DependentUpon>CountryInfoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utils\Methods.cs" />
     <Compile Include="Games\CosmosMemory\Views\AboutPage.xaml.cs">
@@ -114,6 +125,10 @@
     <Compile Include="Views\RegisterView.xaml.cs">
       <DependentUpon>RegisterView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Games\ChemicalHunt\Views\ChemicalView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Games\ChemicalHunt\Views\InitWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -142,7 +157,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Games\GlobalHangman\Views\AboutWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Games\GlobalHangman\Views\AwaitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Games\GlobalHangman\Views\CountryInfoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -244,6 +267,127 @@
     <Resource Include="Assets\mini-falco.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Assets\GlobalHangman.png" />
+    <Resource Include="Assets\ChemicalHunt.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\actinio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\aluminio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\americio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\antimonio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\argonio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\arsenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\astato.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\bario.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\berilio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\berquelio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\bismuto.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\bohrio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\boro.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\bromo.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\cadmio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\calcio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\californio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\carbono.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\cerio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\cesio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\chumbo.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\cloro.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\cobalto.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\cobre.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\copernicio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\criptonio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\cromio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\curio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\darmstadtio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\disprosio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\dubnio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\einstenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\enxofre.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\erbio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\escandio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\estanho.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\estroncio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\europio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\fermio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\ferro.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\flerovio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\fluor.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\fosforo.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\francio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\gadolinio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\galio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\germanio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\hafnio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\hassio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\helio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\hidrogenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\homio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\indio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\iodo.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\iridio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\iterbio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\itrio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\lantanio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\laurencio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\litio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\livermorio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\lutecio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\magnesio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\manganes.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\meitnerio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\mendelevio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\mercurio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\molibdenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\moscovio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\neodimio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\neonio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\neptunio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\niobio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\niponio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\niquel.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\nitrogenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\nobelio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\oganesson.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\osmio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\ouro.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\oxigenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\paladio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\platina.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\plutonio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\polonio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\potassio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\praseodimio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\prata.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\promecio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\protactinio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\radio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\radonio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\renio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\rodio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\roentgenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\rubidio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\rutenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\rutherfordio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\samario.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\seaborgio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\selenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\silicio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\sodio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\talio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\tantalo.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\tecnecio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\telurio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\tenesso.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\terbio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\titanio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\torio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\tulio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\tungstenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\uranio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\vanadio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\xenonio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\zinco.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\zirconio.jpg" />
+    <Content Include="Games\GlobalHangman\Assets\country-flag.svg" />
     <Resource Include="Games\ChemicalHunt\Assets\001-world.png" />
     <Resource Include="Games\ChemicalHunt\Assets\002-window.png" />
     <Resource Include="Games\ChemicalHunt\Assets\003-wifi.png" />

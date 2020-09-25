@@ -17,9 +17,10 @@
 
         <StackPanel>
             <TextBlock FontSize="25" Margin="20">Tentativas: <TextBlock x:Name="Attemps"/></TextBlock>
+            <Image x:Name="CountryFlag"  Width="100" Height="50"/>
         </StackPanel>
         <StackPanel VerticalAlignment="Center">
-            <TextBlock TextAlignment="Center" Text="_ _ _ _ _ _" x:Name="Country" FontSize="60" Typography.Capitals="AllSmallCaps" TextDecorations="{x:Null}"/>
+            <TextBlock TextAlignment="Center" Text="_ _ _ _ _ _" x:Name="Country" Margin="0 140 0 0" FontSize="60" Typography.Capitals="AllSmallCaps" TextDecorations="{x:Null}"/>
         </StackPanel>
         <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Border BorderThickness="2" BorderBrush="Black" Margin="10" CornerRadius="5" MaxWidth="1080">

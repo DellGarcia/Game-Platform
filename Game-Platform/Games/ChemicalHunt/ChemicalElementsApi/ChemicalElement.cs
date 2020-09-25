@@ -6,5 +6,6 @@
         public string Symbol { get; set; }
         public int AtomicNumber { get; set; }
         public double Weight { get; set; }
+        public string IconPath { get; set; }
     }
 }

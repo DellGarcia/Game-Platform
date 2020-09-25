@@ -11,7 +11,7 @@ namespace Game_Platform.Games.ChemicalHunt.Views
 
         private void StartGame(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
+            MainWindow.create().Show();
             Close();
         }
     }

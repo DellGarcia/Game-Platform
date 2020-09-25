@@ -60,10 +60,10 @@ namespace Game_Platform.Games.GlobalHangman.Services.RestCountriesApi
         public string NumericCode { get; set; }
 
         [JsonProperty("currencies")]
-        public List<object> Currencies { get; set; }
+        public List<Currency> Currencies { get; set; }
 
         [JsonProperty("languages")]
-        public List<object> Languages { get; set; }
+        public List<Language> Languages { get; set; }
 
         [JsonProperty("translations")]
         public Translations Translations { get; set; }

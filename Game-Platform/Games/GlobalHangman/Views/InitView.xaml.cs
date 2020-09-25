@@ -16,5 +16,10 @@ namespace Game_Platform.Games.GlobalHangman.Views
             new MainView().Show();
             Close();
         }
+
+        private void ShowGameInfo(object sender, RoutedEventArgs e)
+        {
+            new AboutWindow().ShowDialog();
+        }
     }
 }

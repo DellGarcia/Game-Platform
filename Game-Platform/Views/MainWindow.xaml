@@ -65,11 +65,14 @@
                 <materialDesign:Card Width="200" Height="120" Margin="15" BorderThickness="0">
                     <Image Source="/Assets/CosmosMemory.png" Stretch="Fill" MouseLeftButtonUp="PlayCosmosMemory"/>
                 </materialDesign:Card>
-                <materialDesign:Card Width="200" Height="120" Margin="15"/>
+                <materialDesign:Card Width="200" Height="120" Margin="15">
+                    <Image Source="/Assets/GlobalHangman.png" Stretch="Fill" MouseLeftButtonUp="PlayGlobalHangman" />
+                </materialDesign:Card>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <materialDesign:Card Width="200" Height="120" Margin="15"/>
-                <materialDesign:Card Width="200" Height="120" Margin="15"/>
+                <materialDesign:Card Width="200" Height="120" Margin="15">
+                    <Image Source="/Assets/ChemicalHunt.png" Stretch="Fill" MouseLeftButtonUp="PlayChemicalHunt" />
+                </materialDesign:Card>
             </StackPanel>
         </StackPanel>
     </Grid>
