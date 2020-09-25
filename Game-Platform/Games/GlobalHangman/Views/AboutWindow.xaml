@@ -1,0 +1,35 @@
+﻿<Window x:Class="Game_Platform.Games.GlobalHangman.Views.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Game_Platform.Games.GlobalHangman.Views"
+        mc:Ignorable="d"
+        Title="AboutPage" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="#FF161B2C">
+    <Grid Background="#FF161B2C">
+
+        <ScrollViewer Height="380" VerticalScrollBarVisibility="Auto" Margin="20" VerticalAlignment="Top">
+            <StackPanel>
+                <TextBlock FontSize="25" FontWeight="Bold" Foreground="Beige" Margin="10 20">Global Hangman</TextBlock>
+                <TextBlock FontSize="18" TextWrapping="Wrap" Foreground="GhostWhite" Margin="30 0">
+                    Global Hangman é um jogo cujo objetivo é acertar o nome de um determinado país antes que suas tentativas cheguem a zero.<LineBreak/>
+                    A escolha do país é feita de forma aleatória.<LineBreak/>
+                    A cada acerto, o jogador ganha uma pontuação que é acrescentada à sua conta na Falco Games.<LineBreak/>
+                    É possível jogar Global Hangman tanto pelo teclado físico quanto pelo virtual. <LineBreak/>
+                    Há a possibilidade de que o jogador não conheça o nome de um país apenas pelas letras que estão visíveis, levando esta questão em conta, o jogo possui um botão de dicas, que pode ser usado em qualquer minuto, porém, ao pedir uma dica, o jogador perde uma tentativa. Ao selecionar uma letra incorreta, o jogador perde uma tentativa, e caso suas tentativas cheguem a zero, o jogo é encerrado, e o jogador perde.<LineBreak/>
+                    Boa sorte e bom jogo!
+                </TextBlock>
+
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <Border CornerRadius="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20">
+            <Button Content="Voltar" FontSize="20" Height="40" Width="100" Click="CloseAboutPage" />
+        </Border>
+
+    </Grid>
+</Window>

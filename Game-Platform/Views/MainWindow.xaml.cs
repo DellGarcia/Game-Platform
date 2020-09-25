@@ -1,9 +1,7 @@
-﻿using Game_Platform.Games.CosmosMemory.Views;
-using Game_Platform.Models;
+﻿using Game_Platform.Models;
 using Game_Platform.Views;
 using System;
 using System.Linq;
-using System.Security.RightsManagement;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
@@ -29,14 +27,14 @@ namespace Game_Platform
 
         public static Window GetINSTANCE()
         {
-            if(Application.Current.Properties["loggedPlayer"] == null)
+            if (Application.Current.Properties["loggedPlayer"] == null)
                 return new LoginView();
 
             if (INSTANCE == null)
             {
                 INSTANCE = new MainWindow((Player)Application.Current.Properties["loggedPlayer"]);
             }
-               
+
 
             return INSTANCE;
         }
@@ -65,8 +63,20 @@ namespace Game_Platform
 
         private void PlayCosmosMemory(object sender, MouseButtonEventArgs e)
         {
-            this.Hide();
-            new InitView().Show();
+            Hide();
+            new Games.CosmosMemory.Views.InitView().Show();
+        }
+
+        private void PlayGlobalHangman(object sender, MouseButtonEventArgs e)
+        {
+            Hide();
+            new Games.GlobalHangman.Views.InitView().Show();
+        }
+
+        private void PlayChemicalHunt(object sender, MouseButtonEventArgs e)
+        {
+            Hide();
+            new Games.ChemicalHunt.Views.InitWindow().Show();
         }
     }
 }

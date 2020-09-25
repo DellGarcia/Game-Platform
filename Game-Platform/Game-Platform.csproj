@@ -58,18 +58,40 @@
     </ApplicationDefinition>
     <Compile Include="DAO\PlayerDAO.cs" />
     <Compile Include="Database\ConnectionFactory.cs" />
+    <Compile Include="Games\ChemicalHunt\ChemicalElementsApi\ChemicalElement.cs" />
+    <Compile Include="Games\ChemicalHunt\ChemicalElementsApi\ChemicalElements.cs" />
+    <Compile Include="Games\ChemicalHunt\Models\Game.cs" />
+    <Compile Include="Games\ChemicalHunt\Models\HiddenWord.cs" />
+    <Compile Include="Games\ChemicalHunt\Models\HuntButton.cs" />
+    <Compile Include="Games\ChemicalHunt\Views\ChemicalView.xaml.cs">
+      <DependentUpon>ChemicalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Games\ChemicalHunt\Views\InitWindow.xaml.cs">
+      <DependentUpon>InitWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Games\ChemicalHunt\Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Games\CosmosMemory\Controller\CardController.cs" />
     <Compile Include="Games\CosmosMemory\Controller\CompareController.cs" />
     <Compile Include="Games\CosmosMemory\Models\Card.cs" />
     <Compile Include="Games\CosmosMemory\Models\Difficulties.cs" />
     <Compile Include="Games\CosmosMemory\Utils\Constellations.cs" />
-    <Compile Include="Games\Forca\Controllers\AttemptController.cs" />
-    <Compile Include="Games\Forca\Controllers\GameController.cs" />
-    <Compile Include="Games\Forca\Controllers\KeyBoardController.cs" />
-    <Compile Include="Games\Forca\Models\Game.cs" />
-    <Compile Include="Games\Forca\Services\RestCountriesApi\Translations.cs" />
-    <Compile Include="Games\Forca\Views\AwaitView.xaml.cs">
+    <Compile Include="Games\GlobalHangman\Controllers\AttemptController.cs" />
+    <Compile Include="Games\GlobalHangman\Controllers\GameController.cs" />
+    <Compile Include="Games\GlobalHangman\Controllers\KeyBoardController.cs" />
+    <Compile Include="Games\GlobalHangman\Models\Game.cs" />
+    <Compile Include="Games\GlobalHangman\Services\RestCountriesApi\Currency.cs" />
+    <Compile Include="Games\GlobalHangman\Services\RestCountriesApi\Language.cs" />
+    <Compile Include="Games\GlobalHangman\Services\RestCountriesApi\Translations.cs" />
+    <Compile Include="Games\GlobalHangman\Views\AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Games\GlobalHangman\Views\AwaitView.xaml.cs">
       <DependentUpon>AwaitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Games\GlobalHangman\Views\CountryInfoWindow.xaml.cs">
+      <DependentUpon>CountryInfoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utils\Methods.cs" />
     <Compile Include="Games\CosmosMemory\Views\AboutPage.xaml.cs">
@@ -87,13 +109,13 @@
     <Compile Include="Games\CosmosMemory\Views\HardGameView.xaml.cs">
       <DependentUpon>HardGameView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Games\Forca\Services\RestCountriesApi\RestCountriesResponse.cs" />
-    <Compile Include="Games\Forca\Services\RestCountriesApi\ApiRequest.cs" />
-    <Compile Include="Games\Forca\Services\RestCountriesApi\IRestCountries.cs" />
-    <Compile Include="Games\Forca\Views\InitView.xaml.cs">
+    <Compile Include="Games\GlobalHangman\Services\RestCountriesApi\RestCountriesResponse.cs" />
+    <Compile Include="Games\GlobalHangman\Services\RestCountriesApi\ApiRequest.cs" />
+    <Compile Include="Games\GlobalHangman\Services\RestCountriesApi\IRestCountries.cs" />
+    <Compile Include="Games\GlobalHangman\Views\InitView.xaml.cs">
       <DependentUpon>InitView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Games\Forca\Views\MainView.xaml.cs">
+    <Compile Include="Games\GlobalHangman\Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utils\MD5HashString.cs" />
@@ -103,6 +125,18 @@
     <Compile Include="Views\RegisterView.xaml.cs">
       <DependentUpon>RegisterView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Games\ChemicalHunt\Views\ChemicalView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Games\ChemicalHunt\Views\InitWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Games\ChemicalHunt\Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Games\CosmosMemory\Views\AboutPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -123,15 +157,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Games\Forca\Views\AwaitView.xaml">
+    <Page Include="Games\GlobalHangman\Views\AboutWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Games\Forca\Views\InitView.xaml">
+    <Page Include="Games\GlobalHangman\Views\AwaitView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Games\Forca\Views\MainView.xaml">
+    <Page Include="Games\GlobalHangman\Views\CountryInfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Games\GlobalHangman\Views\InitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Games\GlobalHangman\Views\MainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -175,6 +217,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Games\ChemicalHunt\Assets\HISTÓRIA  3º  ETIM INFO -ATIVIDADE  3º BIMESTRE.doc" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -224,41 +267,282 @@
     <Resource Include="Assets\mini-falco.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Games\Forca\Assets\airplane.png" />
-    <Resource Include="Games\Forca\Assets\plane.png" />
-    <Resource Include="Games\Forca\Assets\cartography.png" />
-    <Resource Include="Games\Forca\Assets\005-navigation.png" />
-    <Resource Include="Games\Forca\Assets\013-backpack.png" />
-    <Resource Include="Games\Forca\Assets\015-plane.png" />
-    <Resource Include="Games\Forca\Assets\023-geography.png" />
-    <Resource Include="Games\Forca\Assets\024-satellite.png" />
-    <Resource Include="Games\Forca\Assets\047-road-sign.png" />
-    <Resource Include="Games\Forca\Assets\001-africa.png" />
-    <Resource Include="Games\Forca\Assets\002-anchor.png" />
-    <Resource Include="Games\Forca\Assets\003-arrows.png" />
-    <Resource Include="Games\Forca\Assets\004-asia.png" />
-    <Resource Include="Games\Forca\Assets\005-binoculars.png" />
-    <Resource Include="Games\Forca\Assets\006-earth.png" />
-    <Resource Include="Games\Forca\Assets\007-earth.png" />
-    <Resource Include="Games\Forca\Assets\008-flag.png" />
-    <Resource Include="Games\Forca\Assets\009-geography.png" />
-    <Resource Include="Games\Forca\Assets\010-gps.png" />
-    <Resource Include="Games\Forca\Assets\011-landscape.png" />
-    <Resource Include="Games\Forca\Assets\012-location.png" />
-    <Resource Include="Games\Forca\Assets\013-map.png" />
-    <Resource Include="Games\Forca\Assets\014-mountain.png" />
-    <Resource Include="Games\Forca\Assets\015-navigation.png" />
-    <Resource Include="Games\Forca\Assets\016-north america.png" />
-    <Resource Include="Games\Forca\Assets\017-protractor.png" />
-    <Resource Include="Games\Forca\Assets\018-satellite.png" />
-    <Resource Include="Games\Forca\Assets\019-search.png" />
-    <Resource Include="Games\Forca\Assets\020-signpost.png" />
-    <Resource Include="Games\Forca\Assets\021-south america.png" />
-    <Resource Include="Games\Forca\Assets\022-telescope.png" />
-    <Resource Include="Games\Forca\Assets\023-tool.png" />
-    <Resource Include="Games\Forca\Assets\024-tree.png" />
-    <Resource Include="Games\Forca\Assets\025-volcano.png" />
-    <Resource Include="Games\Forca\Assets\026-world.png" />
+    <Resource Include="Assets\GlobalHangman.png" />
+    <Resource Include="Assets\ChemicalHunt.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\actinio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\aluminio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\americio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\antimonio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\argonio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\arsenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\astato.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\bario.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\berilio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\berquelio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\bismuto.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\bohrio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\boro.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\bromo.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\cadmio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\calcio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\californio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\carbono.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\cerio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\cesio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\chumbo.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\cloro.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\cobalto.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\cobre.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\copernicio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\criptonio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\cromio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\curio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\darmstadtio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\disprosio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\dubnio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\einstenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\enxofre.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\erbio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\escandio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\estanho.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\estroncio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\europio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\fermio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\ferro.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\flerovio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\fluor.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\fosforo.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\francio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\gadolinio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\galio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\germanio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\hafnio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\hassio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\helio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\hidrogenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\homio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\indio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\iodo.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\iridio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\iterbio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\itrio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\lantanio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\laurencio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\litio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\livermorio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\lutecio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\magnesio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\manganes.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\meitnerio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\mendelevio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\mercurio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\molibdenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\moscovio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\neodimio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\neonio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\neptunio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\niobio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\niponio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\niquel.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\nitrogenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\nobelio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\oganesson.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\osmio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\ouro.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\oxigenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\paladio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\platina.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\plutonio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\polonio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\potassio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\praseodimio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\prata.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\promecio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\protactinio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\radio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\radonio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\renio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\rodio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\roentgenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\rubidio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\rutenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\rutherfordio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\samario.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\seaborgio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\selenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\silicio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\sodio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\talio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\tantalo.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\tecnecio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\telurio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\tenesso.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\terbio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\titanio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\torio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\tulio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\tungstenio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\uranio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\vanadio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\xenonio.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\zinco.jpg" />
+    <Resource Include="Games\ChemicalHunt\Assets\Chemical-Icons\zirconio.jpg" />
+    <Content Include="Games\GlobalHangman\Assets\country-flag.svg" />
+    <Resource Include="Games\ChemicalHunt\Assets\001-world.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\002-window.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\003-wifi.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\004-dashboard.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\005-web.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\006-siren.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\007-flask-6.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\008-virus.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\009-laboratory-6.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\010-phone.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\011-lab-12.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\012-lab-11.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\013-user-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\014-user.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\015-test-tube-2.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\016-to-do.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\017-3d.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\018-radioactivity-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\019-test-tube-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\020-test-tube.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\021-cogwheel-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\022-network-3.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\023-cogwheel.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\024-cloud.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\025-plan.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\026-task.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\027-stats-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\028-report-2.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\029-stats.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\030-science-6.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\031-satellite.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\032-solar-system.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\033-lab-10.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\034-network-2.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\035-sharing.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\036-social-media.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\037-shield.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\038-settings.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\039-server-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\040-server.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\041-seminar.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\042-security.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\043-science-5.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\044-research-2.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\045-manual.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\046-lab-9.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\047-lab-8.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\048-experiment-5.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\049-science-4.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\050-science-3.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\051-science-2.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\052-quiz.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\053-creativity.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\054-experiment-4.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\055-experiment-3.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\056-experiment-2.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\057-experiment-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\058-science-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\059-test.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\060-research-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\061-report-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\062-research.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\063-laboratory-5.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\064-reproduction.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\065-radioactivity.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\066-flask-5.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\067-protection.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\068-computer.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\069-science.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\070-chip.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\071-price-tag.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\072-analytics.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\073-poison.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\074-planets.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\075-pipette.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\076-development.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\077-padlock.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\078-lab-7.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\079-geography.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\080-chemistry.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\081-flask-4.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\082-flask-3.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\083-notepad.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\084-networking.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\085-network-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\086-network.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\087-molecular-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\088-molecular.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\089-modeling-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\090-modeling.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\091-microscope-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\092-microbiology.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\093-bond.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\094-media.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\095-mechanism.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\096-graph.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\097-measurement.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\098-presentation.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\099-analysis.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\100-malware.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\101-flask-2.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\102-flask-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\103-laboratory-4.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\104-laboratory-3.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\105-laboratory-2.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\106-laboratory-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\107-laboratory.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\108-lab-6.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\109-lab-5.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\110-lab-4.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\111-lab-3.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\112-report.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\113-lab-2.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\114-lecture.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\115-microscope.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\116-lab-1.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\117-experiment.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\118-lab.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\119-flask.png" />
+    <Resource Include="Games\ChemicalHunt\Assets\120-books.png" />
+    <Resource Include="Games\GlobalHangman\Assets\airplane.png" />
+    <Resource Include="Games\GlobalHangman\Assets\plane.png" />
+    <Resource Include="Games\GlobalHangman\Assets\cartography.png" />
+    <Resource Include="Games\GlobalHangman\Assets\005-navigation.png" />
+    <Resource Include="Games\GlobalHangman\Assets\013-backpack.png" />
+    <Resource Include="Games\GlobalHangman\Assets\015-plane.png" />
+    <Resource Include="Games\GlobalHangman\Assets\023-geography.png" />
+    <Resource Include="Games\GlobalHangman\Assets\024-satellite.png" />
+    <Resource Include="Games\GlobalHangman\Assets\047-road-sign.png" />
+    <Resource Include="Games\GlobalHangman\Assets\001-africa.png" />
+    <Resource Include="Games\GlobalHangman\Assets\002-anchor.png" />
+    <Resource Include="Games\GlobalHangman\Assets\003-arrows.png" />
+    <Resource Include="Games\GlobalHangman\Assets\004-asia.png" />
+    <Resource Include="Games\GlobalHangman\Assets\005-binoculars.png" />
+    <Resource Include="Games\GlobalHangman\Assets\006-earth.png" />
+    <Resource Include="Games\GlobalHangman\Assets\007-earth.png" />
+    <Resource Include="Games\GlobalHangman\Assets\008-flag.png" />
+    <Resource Include="Games\GlobalHangman\Assets\009-geography.png" />
+    <Resource Include="Games\GlobalHangman\Assets\010-gps.png" />
+    <Resource Include="Games\GlobalHangman\Assets\011-landscape.png" />
+    <Resource Include="Games\GlobalHangman\Assets\012-location.png" />
+    <Resource Include="Games\GlobalHangman\Assets\013-map.png" />
+    <Resource Include="Games\GlobalHangman\Assets\014-mountain.png" />
+    <Resource Include="Games\GlobalHangman\Assets\015-navigation.png" />
+    <Resource Include="Games\GlobalHangman\Assets\016-north america.png" />
+    <Resource Include="Games\GlobalHangman\Assets\017-protractor.png" />
+    <Resource Include="Games\GlobalHangman\Assets\018-satellite.png" />
+    <Resource Include="Games\GlobalHangman\Assets\019-search.png" />
+    <Resource Include="Games\GlobalHangman\Assets\020-signpost.png" />
+    <Resource Include="Games\GlobalHangman\Assets\021-south america.png" />
+    <Resource Include="Games\GlobalHangman\Assets\022-telescope.png" />
+    <Resource Include="Games\GlobalHangman\Assets\023-tool.png" />
+    <Resource Include="Games\GlobalHangman\Assets\024-tree.png" />
+    <Resource Include="Games\GlobalHangman\Assets\025-volcano.png" />
+    <Resource Include="Games\GlobalHangman\Assets\026-world.png" />
     <Resource Include="Assets\CosmosMemory.png" />
     <Resource Include="Assets\Screens\EasyGame.png" />
     <Resource Include="Assets\Screens\HardGame.png" />

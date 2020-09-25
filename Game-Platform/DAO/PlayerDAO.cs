@@ -4,16 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Forms;
 
 namespace Game_Platform.DAO
 {
     public class PlayerDAO
-    { 
+    {
         private readonly ConnectionFactory connection = new ConnectionFactory();
 
         public void Insert(Player player)

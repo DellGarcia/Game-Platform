@@ -1,0 +1,50 @@
+﻿<Window x:Class="Game_Platform.Games.ChemicalHunt.Views.ChemicalView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Game_Platform.Games.ChemicalHunt.Views"
+        mc:Ignorable="d"
+        Title="ChemicalView" Height="500" Width="600" Background="#FF122D5D"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None">
+    <Grid>
+        <StackPanel>
+            <StackPanel HorizontalAlignment="Center" Margin="0 50 0 0">
+                <Image x:Name="ChemicalIcon" Width="150" Source="/Games/ChemicalHunt/Assets/Chemical-icons/hidrogenio.jpg"/>
+            </StackPanel>
+            <StackPanel Width="450" Margin="40" Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="22" Foreground="GhostWhite">
+                    Nome do Elemento:
+                    </TextBlock>
+                    <TextBlock FontSize="22" Foreground="GhostWhite" Margin="10 0" x:Name="ChemicalName"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 10">
+                    <TextBlock FontSize="22" Foreground="GhostWhite">
+                    Símbolo:
+                    </TextBlock>
+                    <TextBlock FontSize="22" Foreground="GhostWhite" Margin="10 0" x:Name="ChemicalSymbol"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="22" Foreground="GhostWhite">
+                    Número Atômico:
+                    </TextBlock>
+                    <TextBlock FontSize="22" Foreground="GhostWhite" Margin="10 0" x:Name="ChemicalNumber"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 10">
+                    <TextBlock FontSize="22" Foreground="GhostWhite">
+                    Peso:
+                    </TextBlock>
+                    <TextBlock FontSize="22" Foreground="GhostWhite" Margin="10 0" x:Name="ChemicalWeight"/>
+                </StackPanel>
+
+                <Button Width="200" Margin="0 20" Height="45" FontSize="22" Foreground="#FFFAF8FF" Background="#FF5E37B0" BorderThickness="0" Click="CloseView">Voltar</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
